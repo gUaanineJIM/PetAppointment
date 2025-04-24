@@ -57,6 +57,9 @@
             this.Update = new System.Windows.Forms.Button();
             this.New = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
+            this.ownerIdSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Find = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +67,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BackColor = System.Drawing.Color.LightPink;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.schedAppointment);
@@ -84,6 +87,7 @@
             // 
             this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.exit.BackColor = System.Drawing.Color.Crimson;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.Control;
             this.exit.Location = new System.Drawing.Point(17, 744);
@@ -97,8 +101,9 @@
             // schedAppointment
             // 
             this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.schedAppointment.BackColor = System.Drawing.Color.LightPink;
+            this.schedAppointment.BackColor = System.Drawing.Color.Transparent;
             this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.schedAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.schedAppointment.Location = new System.Drawing.Point(17, 85);
             this.schedAppointment.Name = "schedAppointment";
@@ -111,7 +116,8 @@
             // RecordBills
             // 
             this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecordBills.BackColor = System.Drawing.Color.LightPink;
+            this.RecordBills.BackColor = System.Drawing.Color.Transparent;
+            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecordBills.Location = new System.Drawing.Point(17, 580);
             this.RecordBills.Name = "RecordBills";
@@ -124,7 +130,8 @@
             // RegisterPet
             // 
             this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterPet.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterPet.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterPet.Location = new System.Drawing.Point(17, 372);
             this.RegisterPet.Name = "RegisterPet";
@@ -137,7 +144,8 @@
             // AddStaff
             // 
             this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.LightPink;
+            this.AddStaff.BackColor = System.Drawing.Color.Transparent;
+            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStaff.Location = new System.Drawing.Point(17, 529);
             this.AddStaff.Name = "AddStaff";
@@ -151,6 +159,8 @@
             // 
             this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RegisterOwner.BackColor = System.Drawing.Color.HotPink;
+            this.RegisterOwner.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterOwner.Location = new System.Drawing.Point(17, 318);
             this.RegisterOwner.Name = "RegisterOwner";
@@ -163,7 +173,8 @@
             // AddTreatments
             // 
             this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.LightPink;
+            this.AddTreatments.BackColor = System.Drawing.Color.Transparent;
+            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddTreatments.Location = new System.Drawing.Point(17, 478);
             this.AddTreatments.Name = "AddTreatments";
@@ -176,7 +187,8 @@
             // VetDoctor
             // 
             this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.LightPink;
+            this.VetDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VetDoctor.Location = new System.Drawing.Point(17, 427);
             this.VetDoctor.Name = "VetDoctor";
@@ -202,7 +214,7 @@
             // 
             this.textownerFname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textownerFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textownerFname.Location = new System.Drawing.Point(229, 165);
+            this.textownerFname.Location = new System.Drawing.Point(241, 318);
             this.textownerFname.Name = "textownerFname";
             this.textownerFname.Size = new System.Drawing.Size(299, 30);
             this.textownerFname.TabIndex = 17;
@@ -213,7 +225,7 @@
             this.labelfname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelfname.AutoSize = true;
             this.labelfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfname.Location = new System.Drawing.Point(224, 137);
+            this.labelfname.Location = new System.Drawing.Point(236, 290);
             this.labelfname.Name = "labelfname";
             this.labelfname.Size = new System.Drawing.Size(123, 25);
             this.labelfname.TabIndex = 16;
@@ -224,7 +236,7 @@
             // 
             this.textownerLname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textownerLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textownerLname.Location = new System.Drawing.Point(229, 253);
+            this.textownerLname.Location = new System.Drawing.Point(241, 406);
             this.textownerLname.Name = "textownerLname";
             this.textownerLname.Size = new System.Drawing.Size(299, 30);
             this.textownerLname.TabIndex = 19;
@@ -235,7 +247,7 @@
             this.lname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lname.AutoSize = true;
             this.lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lname.Location = new System.Drawing.Point(224, 225);
+            this.lname.Location = new System.Drawing.Point(236, 378);
             this.lname.Name = "lname";
             this.lname.Size = new System.Drawing.Size(122, 25);
             this.lname.TabIndex = 18;
@@ -246,7 +258,7 @@
             // 
             this.textphone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textphone.Location = new System.Drawing.Point(229, 341);
+            this.textphone.Location = new System.Drawing.Point(241, 494);
             this.textphone.Name = "textphone";
             this.textphone.Size = new System.Drawing.Size(299, 30);
             this.textphone.TabIndex = 21;
@@ -257,7 +269,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 313);
+            this.label1.Location = new System.Drawing.Point(236, 466);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 20;
@@ -268,7 +280,7 @@
             // 
             this.textaddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textaddress.Location = new System.Drawing.Point(229, 429);
+            this.textaddress.Location = new System.Drawing.Point(241, 582);
             this.textaddress.MaxLength = 11;
             this.textaddress.Name = "textaddress";
             this.textaddress.Size = new System.Drawing.Size(299, 30);
@@ -280,7 +292,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(224, 401);
+            this.label2.Location = new System.Drawing.Point(236, 554);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 25);
             this.label2.TabIndex = 22;
@@ -299,11 +311,11 @@
             this.owner_last_name,
             this.owner_phone,
             this.owner_address});
-            this.appointmentList.Location = new System.Drawing.Point(598, 220);
+            this.appointmentList.Location = new System.Drawing.Point(598, 186);
             this.appointmentList.Name = "appointmentList";
             this.appointmentList.RowHeadersWidth = 51;
             this.appointmentList.RowTemplate.Height = 24;
-            this.appointmentList.Size = new System.Drawing.Size(860, 581);
+            this.appointmentList.Size = new System.Drawing.Size(860, 615);
             this.appointmentList.TabIndex = 25;
             this.appointmentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentList_CellContentClick);
             // 
@@ -347,7 +359,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(926, 192);
+            this.label4.Location = new System.Drawing.Point(936, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(233, 25);
             this.label4.TabIndex = 26;
@@ -357,57 +369,97 @@
             // Delete
             // 
             this.Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Delete.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.Delete.BackColor = System.Drawing.Color.HotPink;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(229, 722);
+            this.Delete.Location = new System.Drawing.Point(398, 753);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(242, 59);
-            this.Delete.TabIndex = 63;
+            this.Delete.Size = new System.Drawing.Size(108, 48);
+            this.Delete.TabIndex = 67;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
             // 
             // Update
             // 
             this.Update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Update.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Update.BackColor = System.Drawing.Color.HotPink;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(229, 640);
+            this.Update.Location = new System.Drawing.Point(398, 676);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(242, 59);
-            this.Update.TabIndex = 62;
+            this.Update.Size = new System.Drawing.Size(108, 48);
+            this.Update.TabIndex = 66;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
             // 
             // New
             // 
             this.New.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.New.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.New.BackColor = System.Drawing.Color.HotPink;
+            this.New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(229, 558);
+            this.New.Location = new System.Drawing.Point(265, 753);
             this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(242, 59);
-            this.New.TabIndex = 61;
+            this.New.Size = new System.Drawing.Size(108, 48);
+            this.New.TabIndex = 65;
             this.New.Text = "New";
             this.New.UseVisualStyleBackColor = false;
             // 
             // Add
             // 
             this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Add.BackColor = System.Drawing.Color.LightBlue;
+            this.Add.BackColor = System.Drawing.Color.HotPink;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(229, 480);
+            this.Add.Location = new System.Drawing.Point(265, 676);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(242, 59);
-            this.Add.TabIndex = 60;
+            this.Add.Size = new System.Drawing.Size(108, 48);
+            this.Add.TabIndex = 64;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            // 
+            // ownerIdSearch
+            // 
+            this.ownerIdSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ownerIdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ownerIdSearch.Location = new System.Drawing.Point(241, 196);
+            this.ownerIdSearch.Name = "ownerIdSearch";
+            this.ownerIdSearch.Size = new System.Drawing.Size(236, 30);
+            this.ownerIdSearch.TabIndex = 68;
+            this.ownerIdSearch.TextChanged += new System.EventHandler(this.ownerIdSearch_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(236, 168);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 25);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Search Owner Id:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // Find
+            // 
+            this.Find.BackColor = System.Drawing.Color.LightPink;
+            this.Find.Location = new System.Drawing.Point(483, 194);
+            this.Find.Name = "Find";
+            this.Find.Size = new System.Drawing.Size(85, 32);
+            this.Find.TabIndex = 70;
+            this.Find.Text = "Search";
+            this.Find.UseVisualStyleBackColor = false;
+            this.Find.Click += new System.EventHandler(this.Find_Click);
             // 
             // RegisterOwners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.Find);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ownerIdSearch);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.New);
@@ -467,5 +519,8 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button New;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.TextBox ownerIdSearch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Find;
     }
 }

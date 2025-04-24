@@ -63,6 +63,7 @@
             this.RecordBills = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.schedAppointment = new System.Windows.Forms.Button();
             this.appointmentList = new System.Windows.Forms.DataGridView();
             this.appointment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appointment_pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,6 @@
             this.appointment_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appointment_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
-            this.schedAppointment = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.New = new System.Windows.Forms.Button();
@@ -233,7 +233,7 @@
             // petList
             // 
             this.petList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.petList.BackgroundColor = System.Drawing.Color.LightPink;
+            this.petList.BackgroundColor = System.Drawing.Color.White;
             this.petList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.petList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.petList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -264,7 +264,7 @@
             // vetList
             // 
             this.vetList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vetList.BackgroundColor = System.Drawing.Color.LightPink;
+            this.vetList.BackgroundColor = System.Drawing.Color.White;
             this.vetList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.vetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vetList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -303,7 +303,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.LightPink;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -378,7 +378,8 @@
             // VetDoctor
             // 
             this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.LightPink;
+            this.VetDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VetDoctor.Location = new System.Drawing.Point(17, 427);
             this.VetDoctor.Name = "VetDoctor";
@@ -391,7 +392,8 @@
             // AddTreatments
             // 
             this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.LightPink;
+            this.AddTreatments.BackColor = System.Drawing.Color.Transparent;
+            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddTreatments.Location = new System.Drawing.Point(17, 478);
             this.AddTreatments.Name = "AddTreatments";
@@ -404,7 +406,8 @@
             // RegisterOwner
             // 
             this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterOwner.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterOwner.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterOwner.Location = new System.Drawing.Point(17, 318);
             this.RegisterOwner.Name = "RegisterOwner";
@@ -417,7 +420,8 @@
             // AddStaff
             // 
             this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.LightPink;
+            this.AddStaff.BackColor = System.Drawing.Color.Transparent;
+            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStaff.Location = new System.Drawing.Point(17, 529);
             this.AddStaff.Name = "AddStaff";
@@ -430,7 +434,8 @@
             // RegisterPet
             // 
             this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterPet.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterPet.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterPet.Location = new System.Drawing.Point(17, 372);
             this.RegisterPet.Name = "RegisterPet";
@@ -443,7 +448,8 @@
             // RecordBills
             // 
             this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecordBills.BackColor = System.Drawing.Color.LightPink;
+            this.RecordBills.BackColor = System.Drawing.Color.Transparent;
+            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecordBills.Location = new System.Drawing.Point(17, 580);
             this.RecordBills.Name = "RecordBills";
@@ -457,6 +463,7 @@
             // 
             this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.exit.BackColor = System.Drawing.Color.Crimson;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.Control;
             this.exit.Location = new System.Drawing.Point(17, 744);
@@ -470,7 +477,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BackColor = System.Drawing.Color.LightPink;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.schedAppointment);
@@ -486,10 +493,25 @@
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // schedAppointment
+            // 
+            this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.schedAppointment.BackColor = System.Drawing.Color.HotPink;
+            this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.schedAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.schedAppointment.Location = new System.Drawing.Point(17, 85);
+            this.schedAppointment.Name = "schedAppointment";
+            this.schedAppointment.Size = new System.Drawing.Size(150, 82);
+            this.schedAppointment.TabIndex = 14;
+            this.schedAppointment.Text = "Appointment";
+            this.schedAppointment.UseVisualStyleBackColor = false;
+            this.schedAppointment.Click += new System.EventHandler(this.button1_Click);
+            // 
             // appointmentList
             // 
             this.appointmentList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.appointmentList.BackgroundColor = System.Drawing.Color.LightPink;
+            this.appointmentList.BackgroundColor = System.Drawing.Color.White;
             this.appointmentList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.appointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.appointmentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -569,24 +591,11 @@
             this.label4.Text = "Appointment List";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // schedAppointment
-            // 
-            this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.schedAppointment.BackColor = System.Drawing.Color.HotPink;
-            this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schedAppointment.Location = new System.Drawing.Point(17, 85);
-            this.schedAppointment.Name = "schedAppointment";
-            this.schedAppointment.Size = new System.Drawing.Size(150, 82);
-            this.schedAppointment.TabIndex = 14;
-            this.schedAppointment.Text = "Appointment";
-            this.schedAppointment.UseVisualStyleBackColor = false;
-            this.schedAppointment.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Delete
             // 
             this.Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Delete.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.Delete.BackColor = System.Drawing.Color.HotPink;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.Location = new System.Drawing.Point(1333, 166);
             this.Delete.Name = "Delete";
@@ -598,7 +607,8 @@
             // Update
             // 
             this.Update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Update.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Update.BackColor = System.Drawing.Color.HotPink;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update.Location = new System.Drawing.Point(1333, 89);
             this.Update.Name = "Update";
@@ -610,11 +620,12 @@
             // New
             // 
             this.New.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.New.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.New.BackColor = System.Drawing.Color.HotPink;
+            this.New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(1168, 166);
+            this.New.Location = new System.Drawing.Point(1200, 166);
             this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(145, 48);
+            this.New.Size = new System.Drawing.Size(108, 48);
             this.New.TabIndex = 61;
             this.New.Text = "New";
             this.New.UseVisualStyleBackColor = false;
@@ -622,11 +633,12 @@
             // Add
             // 
             this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Add.BackColor = System.Drawing.Color.LightBlue;
+            this.Add.BackColor = System.Drawing.Color.HotPink;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(1168, 89);
+            this.Add.Location = new System.Drawing.Point(1200, 89);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(145, 48);
+            this.Add.Size = new System.Drawing.Size(108, 48);
             this.Add.TabIndex = 60;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
@@ -635,7 +647,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);

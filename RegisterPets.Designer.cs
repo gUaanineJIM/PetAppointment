@@ -35,7 +35,6 @@
             this.owner_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ownersList = new System.Windows.Forms.DataGridView();
             this.owner_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textpetDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textpetAge = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,16 +55,20 @@
             this.textpetOwnerId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.petsList = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.petOwner_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animal_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.New = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
+            this.Find = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ownerIdSearch = new System.Windows.Forms.TextBox();
+            this.textpetDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ownersList)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.petsList)).BeginInit();
@@ -136,22 +139,12 @@
             this.owner_address.Name = "owner_address";
             this.owner_address.Width = 125;
             // 
-            // textpetDescription
-            // 
-            this.textpetDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textpetDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpetDescription.Location = new System.Drawing.Point(228, 564);
-            this.textpetDescription.MaxLength = 11;
-            this.textpetDescription.Name = "textpetDescription";
-            this.textpetDescription.Size = new System.Drawing.Size(299, 30);
-            this.textpetDescription.TabIndex = 36;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(223, 536);
+            this.label2.Location = new System.Drawing.Point(225, 547);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 25);
             this.label2.TabIndex = 35;
@@ -161,7 +154,7 @@
             // 
             this.textpetAge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textpetAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpetAge.Location = new System.Drawing.Point(228, 476);
+            this.textpetAge.Location = new System.Drawing.Point(230, 507);
             this.textpetAge.Name = "textpetAge";
             this.textpetAge.Size = new System.Drawing.Size(299, 30);
             this.textpetAge.TabIndex = 34;
@@ -171,7 +164,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 448);
+            this.label1.Location = new System.Drawing.Point(225, 479);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 25);
             this.label1.TabIndex = 33;
@@ -181,7 +174,7 @@
             // 
             this.textpetAnimalType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textpetAnimalType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpetAnimalType.Location = new System.Drawing.Point(228, 388);
+            this.textpetAnimalType.Location = new System.Drawing.Point(230, 436);
             this.textpetAnimalType.Name = "textpetAnimalType";
             this.textpetAnimalType.Size = new System.Drawing.Size(299, 30);
             this.textpetAnimalType.TabIndex = 32;
@@ -191,7 +184,7 @@
             this.lname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lname.AutoSize = true;
             this.lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lname.Location = new System.Drawing.Point(223, 360);
+            this.lname.Location = new System.Drawing.Point(225, 408);
             this.lname.Name = "lname";
             this.lname.Size = new System.Drawing.Size(140, 25);
             this.lname.TabIndex = 31;
@@ -201,7 +194,7 @@
             // 
             this.textpetName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textpetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpetName.Location = new System.Drawing.Point(228, 220);
+            this.textpetName.Location = new System.Drawing.Point(230, 298);
             this.textpetName.Name = "textpetName";
             this.textpetName.Size = new System.Drawing.Size(299, 30);
             this.textpetName.TabIndex = 30;
@@ -221,6 +214,7 @@
             // 
             this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.exit.BackColor = System.Drawing.Color.Crimson;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.Control;
             this.exit.Location = new System.Drawing.Point(17, 744);
@@ -234,8 +228,9 @@
             // schedAppointment
             // 
             this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.schedAppointment.BackColor = System.Drawing.Color.LightPink;
+            this.schedAppointment.BackColor = System.Drawing.Color.Transparent;
             this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.schedAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.schedAppointment.Location = new System.Drawing.Point(17, 85);
             this.schedAppointment.Name = "schedAppointment";
@@ -248,7 +243,8 @@
             // RecordBills
             // 
             this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecordBills.BackColor = System.Drawing.Color.LightPink;
+            this.RecordBills.BackColor = System.Drawing.Color.Transparent;
+            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecordBills.Location = new System.Drawing.Point(17, 580);
             this.RecordBills.Name = "RecordBills";
@@ -262,6 +258,7 @@
             // 
             this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RegisterPet.BackColor = System.Drawing.Color.HotPink;
+            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterPet.Location = new System.Drawing.Point(17, 372);
             this.RegisterPet.Name = "RegisterPet";
@@ -273,7 +270,8 @@
             // AddStaff
             // 
             this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.LightPink;
+            this.AddStaff.BackColor = System.Drawing.Color.Transparent;
+            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStaff.Location = new System.Drawing.Point(17, 529);
             this.AddStaff.Name = "AddStaff";
@@ -286,7 +284,8 @@
             // RegisterOwner
             // 
             this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterOwner.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterOwner.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterOwner.Location = new System.Drawing.Point(17, 318);
             this.RegisterOwner.Name = "RegisterOwner";
@@ -299,7 +298,8 @@
             // AddTreatments
             // 
             this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.LightPink;
+            this.AddTreatments.BackColor = System.Drawing.Color.Transparent;
+            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddTreatments.Location = new System.Drawing.Point(17, 478);
             this.AddTreatments.Name = "AddTreatments";
@@ -312,7 +312,8 @@
             // VetDoctor
             // 
             this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.LightPink;
+            this.VetDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VetDoctor.Location = new System.Drawing.Point(17, 427);
             this.VetDoctor.Name = "VetDoctor";
@@ -327,7 +328,7 @@
             this.labelfname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelfname.AutoSize = true;
             this.labelfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfname.Location = new System.Drawing.Point(223, 192);
+            this.labelfname.Location = new System.Drawing.Point(225, 270);
             this.labelfname.Name = "labelfname";
             this.labelfname.Size = new System.Drawing.Size(113, 25);
             this.labelfname.TabIndex = 29;
@@ -336,7 +337,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BackColor = System.Drawing.Color.LightPink;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.schedAppointment);
@@ -355,7 +356,7 @@
             // 
             this.textpetOwnerId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textpetOwnerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpetOwnerId.Location = new System.Drawing.Point(228, 300);
+            this.textpetOwnerId.Location = new System.Drawing.Point(230, 361);
             this.textpetOwnerId.Name = "textpetOwnerId";
             this.textpetOwnerId.Size = new System.Drawing.Size(299, 30);
             this.textpetOwnerId.TabIndex = 41;
@@ -365,7 +366,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(223, 272);
+            this.label3.Location = new System.Drawing.Point(225, 333);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 40;
@@ -389,17 +390,6 @@
             this.petsList.RowTemplate.Height = 24;
             this.petsList.Size = new System.Drawing.Size(860, 324);
             this.petsList.TabIndex = 42;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(947, 527);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 25);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "Owners List";
             // 
             // pet_id
             // 
@@ -436,60 +426,118 @@
             this.description.Name = "description";
             this.description.Width = 125;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(947, 527);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 25);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Owners List";
+            // 
             // Delete
             // 
             this.Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Delete.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.Delete.BackColor = System.Drawing.Color.HotPink;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(399, 722);
+            this.Delete.Location = new System.Drawing.Point(407, 773);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(149, 59);
-            this.Delete.TabIndex = 63;
+            this.Delete.Size = new System.Drawing.Size(108, 48);
+            this.Delete.TabIndex = 67;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
             // 
             // Update
             // 
             this.Update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Update.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Update.BackColor = System.Drawing.Color.HotPink;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(399, 630);
+            this.Update.Location = new System.Drawing.Point(407, 696);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(149, 59);
-            this.Update.TabIndex = 62;
+            this.Update.Size = new System.Drawing.Size(108, 48);
+            this.Update.TabIndex = 66;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
             // 
             // New
             // 
             this.New.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.New.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.New.BackColor = System.Drawing.Color.HotPink;
+            this.New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(227, 722);
+            this.New.Location = new System.Drawing.Point(274, 773);
             this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(149, 59);
-            this.New.TabIndex = 61;
+            this.New.Size = new System.Drawing.Size(108, 48);
+            this.New.TabIndex = 65;
             this.New.Text = "New";
             this.New.UseVisualStyleBackColor = false;
             // 
             // Add
             // 
             this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Add.BackColor = System.Drawing.Color.LightBlue;
+            this.Add.BackColor = System.Drawing.Color.HotPink;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(227, 630);
+            this.Add.Location = new System.Drawing.Point(274, 696);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(149, 59);
-            this.Add.TabIndex = 60;
+            this.Add.Size = new System.Drawing.Size(108, 48);
+            this.Add.TabIndex = 64;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            // 
+            // Find
+            // 
+            this.Find.BackColor = System.Drawing.Color.LightPink;
+            this.Find.Location = new System.Drawing.Point(472, 189);
+            this.Find.Name = "Find";
+            this.Find.Size = new System.Drawing.Size(85, 32);
+            this.Find.TabIndex = 73;
+            this.Find.Text = "Search";
+            this.Find.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(225, 163);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 25);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "Search Pet Id:";
+            // 
+            // ownerIdSearch
+            // 
+            this.ownerIdSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ownerIdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ownerIdSearch.Location = new System.Drawing.Point(230, 191);
+            this.ownerIdSearch.Name = "ownerIdSearch";
+            this.ownerIdSearch.Size = new System.Drawing.Size(236, 30);
+            this.ownerIdSearch.TabIndex = 71;
+            // 
+            // textpetDescription
+            // 
+            this.textpetDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textpetDescription.Location = new System.Drawing.Point(230, 575);
+            this.textpetDescription.Name = "textpetDescription";
+            this.textpetDescription.Size = new System.Drawing.Size(299, 91);
+            this.textpetDescription.TabIndex = 74;
+            this.textpetDescription.Text = "";
             // 
             // RegisterPets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.textpetDescription);
+            this.Controls.Add(this.Find);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ownerIdSearch);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.New);
@@ -500,7 +548,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ownersList);
-            this.Controls.Add(this.textpetDescription);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textpetAge);
             this.Controls.Add(this.label1);
@@ -514,6 +561,7 @@
             this.Name = "RegisterPets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterPets";
+            this.Load += new System.EventHandler(this.RegisterPets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ownersList)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.petsList)).EndInit();
@@ -531,7 +579,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn owner_id;
         private System.Windows.Forms.DataGridView ownersList;
         private System.Windows.Forms.DataGridViewTextBoxColumn owner_address;
-        private System.Windows.Forms.TextBox textpetDescription;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textpetAge;
         private System.Windows.Forms.Label label1;
@@ -562,5 +609,9 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button New;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Find;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox ownerIdSearch;
+        private System.Windows.Forms.RichTextBox textpetDescription;
     }
 }

@@ -74,5 +74,10 @@ namespace PetAppointment
                 Application.Exit();
             }
         }
+
+        private void Vet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,5 +69,10 @@ namespace PetAppointment
             staff.Show();
             this.Close();
         }
+
+        private void Treatments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

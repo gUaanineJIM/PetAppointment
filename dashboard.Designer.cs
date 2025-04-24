@@ -42,6 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dashlabel
@@ -49,21 +51,25 @@
             this.dashlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dashlabel.AutoSize = true;
             this.dashlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashlabel.Location = new System.Drawing.Point(37, 36);
+            this.dashlabel.Location = new System.Drawing.Point(537, 66);
             this.dashlabel.Name = "dashlabel";
-            this.dashlabel.Size = new System.Drawing.Size(521, 36);
+            this.dashlabel.Size = new System.Drawing.Size(782, 72);
             this.dashlabel.TabIndex = 0;
-            this.dashlabel.Text = "Start the day with a pawsome smile!";
+            this.dashlabel.Text = "We hope you and your furry (or feathered) friends are \r\nready for another beautif" +
+    "ul day to save lives.";
+            this.dashlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.dashlabel.Click += new System.EventHandler(this.dashlabel_Click);
             // 
             // scheduleAppointment
             // 
             this.scheduleAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.scheduleAppointment.BackColor = System.Drawing.Color.Pink;
+            this.scheduleAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.scheduleAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.scheduleAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scheduleAppointment.Location = new System.Drawing.Point(453, 203);
+            this.scheduleAppointment.Location = new System.Drawing.Point(740, 672);
             this.scheduleAppointment.Name = "scheduleAppointment";
-            this.scheduleAppointment.Size = new System.Drawing.Size(567, 76);
+            this.scheduleAppointment.Size = new System.Drawing.Size(412, 61);
             this.scheduleAppointment.TabIndex = 1;
             this.scheduleAppointment.Text = "Schedule Appointment";
             this.scheduleAppointment.UseVisualStyleBackColor = false;
@@ -72,11 +78,13 @@
             // RegisterOwner
             // 
             this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterOwner.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterOwner.BackColor = System.Drawing.Color.Pink;
+            this.RegisterOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterOwner.Location = new System.Drawing.Point(43, 420);
+            this.RegisterOwner.Location = new System.Drawing.Point(43, 75);
             this.RegisterOwner.Name = "RegisterOwner";
-            this.RegisterOwner.Size = new System.Drawing.Size(408, 84);
+            this.RegisterOwner.Size = new System.Drawing.Size(219, 61);
             this.RegisterOwner.TabIndex = 2;
             this.RegisterOwner.Text = "Register Owner";
             this.RegisterOwner.UseVisualStyleBackColor = false;
@@ -85,11 +93,13 @@
             // RegisterPet
             // 
             this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterPet.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterPet.BackColor = System.Drawing.Color.Pink;
+            this.RegisterPet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterPet.Location = new System.Drawing.Point(43, 641);
+            this.RegisterPet.Location = new System.Drawing.Point(43, 189);
             this.RegisterPet.Name = "RegisterPet";
-            this.RegisterPet.Size = new System.Drawing.Size(408, 84);
+            this.RegisterPet.Size = new System.Drawing.Size(219, 61);
             this.RegisterPet.TabIndex = 3;
             this.RegisterPet.Text = "Register Pet";
             this.RegisterPet.UseVisualStyleBackColor = false;
@@ -98,11 +108,13 @@
             // AddTreatments
             // 
             this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.LightPink;
+            this.AddTreatments.BackColor = System.Drawing.Color.Pink;
+            this.AddTreatments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddTreatments.Location = new System.Drawing.Point(541, 641);
+            this.AddTreatments.Location = new System.Drawing.Point(43, 548);
             this.AddTreatments.Name = "AddTreatments";
-            this.AddTreatments.Size = new System.Drawing.Size(408, 84);
+            this.AddTreatments.Size = new System.Drawing.Size(219, 61);
             this.AddTreatments.TabIndex = 5;
             this.AddTreatments.Text = "Add Treatment";
             this.AddTreatments.UseVisualStyleBackColor = false;
@@ -111,11 +123,13 @@
             // VetDoctor
             // 
             this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.LightPink;
+            this.VetDoctor.BackColor = System.Drawing.Color.Pink;
+            this.VetDoctor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VetDoctor.Location = new System.Drawing.Point(541, 420);
+            this.VetDoctor.Location = new System.Drawing.Point(43, 312);
             this.VetDoctor.Name = "VetDoctor";
-            this.VetDoctor.Size = new System.Drawing.Size(408, 84);
+            this.VetDoctor.Size = new System.Drawing.Size(219, 61);
             this.VetDoctor.TabIndex = 4;
             this.VetDoctor.Text = "Vet Doctor";
             this.VetDoctor.UseVisualStyleBackColor = false;
@@ -124,11 +138,13 @@
             // RecordBills
             // 
             this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecordBills.BackColor = System.Drawing.Color.LightPink;
+            this.RecordBills.BackColor = System.Drawing.Color.Pink;
+            this.RecordBills.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordBills.Location = new System.Drawing.Point(1040, 641);
+            this.RecordBills.Location = new System.Drawing.Point(43, 672);
             this.RecordBills.Name = "RecordBills";
-            this.RecordBills.Size = new System.Drawing.Size(408, 84);
+            this.RecordBills.Size = new System.Drawing.Size(219, 61);
             this.RecordBills.TabIndex = 7;
             this.RecordBills.Text = "Record Bills";
             this.RecordBills.UseVisualStyleBackColor = false;
@@ -137,11 +153,13 @@
             // AddStaff
             // 
             this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.LightPink;
+            this.AddStaff.BackColor = System.Drawing.Color.Pink;
+            this.AddStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStaff.Location = new System.Drawing.Point(1040, 420);
+            this.AddStaff.Location = new System.Drawing.Point(43, 428);
             this.AddStaff.Name = "AddStaff";
-            this.AddStaff.Size = new System.Drawing.Size(408, 84);
+            this.AddStaff.Size = new System.Drawing.Size(219, 61);
             this.AddStaff.TabIndex = 6;
             this.AddStaff.Text = "Add Staff";
             this.AddStaff.UseVisualStyleBackColor = false;
@@ -151,9 +169,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 395);
+            this.label1.Location = new System.Drawing.Point(39, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 22);
             this.label1.TabIndex = 8;
@@ -164,9 +182,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightBlue;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 616);
+            this.label2.Location = new System.Drawing.Point(39, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(278, 22);
             this.label2.TabIndex = 9;
@@ -177,9 +195,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightBlue;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(537, 395);
+            this.label3.Location = new System.Drawing.Point(39, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(209, 22);
             this.label3.TabIndex = 10;
@@ -190,9 +208,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightBlue;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(537, 616);
+            this.label4.Location = new System.Drawing.Point(39, 523);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 22);
             this.label4.TabIndex = 11;
@@ -203,9 +221,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.LightBlue;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1036, 395);
+            this.label5.Location = new System.Drawing.Point(39, 403);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(172, 22);
             this.label5.TabIndex = 12;
@@ -216,21 +234,32 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.LightBlue;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1036, 616);
+            this.label6.Location = new System.Drawing.Point(39, 647);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 22);
             this.label6.TabIndex = 13;
             this.label6.Text = "Record the bills";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PetAppointment.Properties.Resources.veterinary1;
+            this.pictureBox1.Location = new System.Drawing.Point(740, 209);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -250,6 +279,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.dashboard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +301,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

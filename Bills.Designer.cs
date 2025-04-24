@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Delete = new System.Windows.Forms.Button();
-            this.Update = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
-            this.New = new System.Windows.Forms.Button();
             this.schedAppointment = new System.Windows.Forms.Button();
             this.RecordBills = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,64 +57,24 @@
             this.medication = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
+            this.New = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.Find = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.staffIdSearch = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Delete
-            // 
-            this.Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Delete.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(399, 463);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(149, 59);
-            this.Delete.TabIndex = 81;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = false;
-            // 
-            // Update
-            // 
-            this.Update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Update.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(399, 371);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(149, 59);
-            this.Update.TabIndex = 80;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = false;
-            // 
-            // Add
-            // 
-            this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Add.BackColor = System.Drawing.Color.LightBlue;
-            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(227, 371);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(149, 59);
-            this.Add.TabIndex = 78;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = false;
-            // 
-            // New
-            // 
-            this.New.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.New.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(227, 463);
-            this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(149, 59);
-            this.New.TabIndex = 79;
-            this.New.Text = "New";
-            this.New.UseVisualStyleBackColor = false;
-            // 
             // schedAppointment
             // 
             this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.schedAppointment.BackColor = System.Drawing.Color.LightPink;
+            this.schedAppointment.BackColor = System.Drawing.Color.Transparent;
             this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.schedAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.schedAppointment.Location = new System.Drawing.Point(17, 85);
             this.schedAppointment.Name = "schedAppointment";
@@ -132,6 +88,7 @@
             // 
             this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RecordBills.BackColor = System.Drawing.Color.HotPink;
+            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecordBills.Location = new System.Drawing.Point(17, 580);
             this.RecordBills.Name = "RecordBills";
@@ -156,7 +113,7 @@
             // 
             this.textBillStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBillStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBillStatus.Location = new System.Drawing.Point(227, 287);
+            this.textBillStatus.Location = new System.Drawing.Point(244, 500);
             this.textBillStatus.MaxLength = 11;
             this.textBillStatus.Name = "textBillStatus";
             this.textBillStatus.Size = new System.Drawing.Size(299, 30);
@@ -167,7 +124,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(222, 259);
+            this.label1.Location = new System.Drawing.Point(239, 472);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 74;
@@ -178,7 +135,7 @@
             this.lname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lname.AutoSize = true;
             this.lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lname.Location = new System.Drawing.Point(222, 171);
+            this.lname.Location = new System.Drawing.Point(239, 384);
             this.lname.Name = "lname";
             this.lname.Size = new System.Drawing.Size(236, 25);
             this.lname.TabIndex = 72;
@@ -188,7 +145,7 @@
             // 
             this.textbillAppointmentId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textbillAppointmentId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbillAppointmentId.Location = new System.Drawing.Point(227, 111);
+            this.textbillAppointmentId.Location = new System.Drawing.Point(244, 324);
             this.textbillAppointmentId.Name = "textbillAppointmentId";
             this.textbillAppointmentId.Size = new System.Drawing.Size(299, 30);
             this.textbillAppointmentId.TabIndex = 71;
@@ -198,7 +155,7 @@
             this.labelfname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelfname.AutoSize = true;
             this.labelfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfname.Location = new System.Drawing.Point(222, 83);
+            this.labelfname.Location = new System.Drawing.Point(239, 296);
             this.labelfname.Name = "labelfname";
             this.labelfname.Size = new System.Drawing.Size(164, 25);
             this.labelfname.TabIndex = 70;
@@ -218,7 +175,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BackColor = System.Drawing.Color.LightPink;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.schedAppointment);
@@ -250,7 +207,8 @@
             // RegisterPet
             // 
             this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterPet.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterPet.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterPet.Location = new System.Drawing.Point(17, 372);
             this.RegisterPet.Name = "RegisterPet";
@@ -263,7 +221,8 @@
             // AddStaff
             // 
             this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.LightPink;
+            this.AddStaff.BackColor = System.Drawing.Color.Transparent;
+            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStaff.Location = new System.Drawing.Point(17, 529);
             this.AddStaff.Name = "AddStaff";
@@ -276,7 +235,8 @@
             // RegisterOwner
             // 
             this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterOwner.BackColor = System.Drawing.Color.LightPink;
+            this.RegisterOwner.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterOwner.Location = new System.Drawing.Point(17, 318);
             this.RegisterOwner.Name = "RegisterOwner";
@@ -289,7 +249,8 @@
             // AddTreatments
             // 
             this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.LightPink;
+            this.AddTreatments.BackColor = System.Drawing.Color.Transparent;
+            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddTreatments.Location = new System.Drawing.Point(17, 478);
             this.AddTreatments.Name = "AddTreatments";
@@ -302,7 +263,8 @@
             // VetDoctor
             // 
             this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.LightPink;
+            this.VetDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VetDoctor.Location = new System.Drawing.Point(17, 427);
             this.VetDoctor.Name = "VetDoctor";
@@ -362,7 +324,7 @@
             // 
             this.textTotalCost.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTotalCost.Location = new System.Drawing.Point(227, 199);
+            this.textTotalCost.Location = new System.Drawing.Point(244, 412);
             this.textTotalCost.Name = "textTotalCost";
             this.textTotalCost.Size = new System.Drawing.Size(299, 30);
             this.textTotalCost.TabIndex = 73;
@@ -432,18 +394,103 @@
             this.label2.TabIndex = 82;
             this.label2.Text = "Treatment Record";
             // 
+            // Delete
+            // 
+            this.Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Delete.BackColor = System.Drawing.Color.HotPink;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(409, 733);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(108, 48);
+            this.Delete.TabIndex = 87;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = false;
+            // 
+            // Update
+            // 
+            this.Update.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Update.BackColor = System.Drawing.Color.HotPink;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.Location = new System.Drawing.Point(409, 656);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(108, 48);
+            this.Update.TabIndex = 86;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = false;
+            // 
+            // New
+            // 
+            this.New.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.New.BackColor = System.Drawing.Color.HotPink;
+            this.New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.New.Location = new System.Drawing.Point(276, 733);
+            this.New.Name = "New";
+            this.New.Size = new System.Drawing.Size(108, 48);
+            this.New.TabIndex = 85;
+            this.New.Text = "New";
+            this.New.UseVisualStyleBackColor = false;
+            // 
+            // Add
+            // 
+            this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Add.BackColor = System.Drawing.Color.HotPink;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(276, 656);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(108, 48);
+            this.Add.TabIndex = 84;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = false;
+            // 
+            // Find
+            // 
+            this.Find.BackColor = System.Drawing.Color.LightPink;
+            this.Find.Location = new System.Drawing.Point(486, 162);
+            this.Find.Name = "Find";
+            this.Find.Size = new System.Drawing.Size(85, 32);
+            this.Find.TabIndex = 90;
+            this.Find.Text = "Search";
+            this.Find.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(239, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 25);
+            this.label6.TabIndex = 89;
+            this.label6.Text = "Search bill Id:";
+            // 
+            // staffIdSearch
+            // 
+            this.staffIdSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.staffIdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffIdSearch.Location = new System.Drawing.Point(244, 164);
+            this.staffIdSearch.Name = "staffIdSearch";
+            this.staffIdSearch.Size = new System.Drawing.Size(236, 30);
+            this.staffIdSearch.TabIndex = 88;
+            // 
             // Bills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1482, 893);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Find);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.staffIdSearch);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
-            this.Controls.Add(this.Add);
             this.Controls.Add(this.New);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBillStatus);
             this.Controls.Add(this.label1);
@@ -467,11 +514,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button New;
         private System.Windows.Forms.Button schedAppointment;
         private System.Windows.Forms.Button RecordBills;
         private System.Windows.Forms.Label label4;
@@ -501,5 +543,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn medication;
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button New;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Find;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox staffIdSearch;
     }
 }
