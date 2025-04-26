@@ -16,7 +16,7 @@ namespace PetAppointment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginAcc());
+            Application.Run(new SignIn());
         }
     }
 }
