@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             this.scheduleAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.scheduleAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.scheduleAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scheduleAppointment.Location = new System.Drawing.Point(740, 672);
+            this.scheduleAppointment.Location = new System.Drawing.Point(630, 672);
             this.scheduleAppointment.Name = "scheduleAppointment";
             this.scheduleAppointment.Size = new System.Drawing.Size(412, 61);
             this.scheduleAppointment.TabIndex = 1;
@@ -246,12 +247,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PetAppointment.Properties.Resources.veterinary1;
-            this.pictureBox1.Location = new System.Drawing.Point(740, 209);
+            this.pictureBox1.Location = new System.Drawing.Point(630, 209);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(350, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(1248, 771);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 46);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Sign Out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dashboard
             // 
@@ -259,6 +276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -302,5 +320,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

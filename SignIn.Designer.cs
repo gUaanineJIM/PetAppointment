@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,25 +37,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
-            this.textConPassword = new System.Windows.Forms.TextBox();
-            this.textRecoveryPin = new System.Windows.Forms.TextBox();
+            this.textConfirmPassword = new System.Windows.Forms.TextBox();
+            this.textFavPet = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSignIn = new System.Windows.Forms.Button();
-            this.Login = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.createAcc = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::PetAppointment.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // textName
             // 
@@ -66,6 +55,7 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(300, 30);
             this.textName.TabIndex = 5;
+            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // label2
             // 
@@ -105,7 +95,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(376, 266);
+            this.label4.Location = new System.Drawing.Point(376, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(233, 29);
             this.label4.TabIndex = 8;
@@ -128,12 +118,12 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(376, 341);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(376, 321);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 29);
+            this.label6.Size = new System.Drawing.Size(140, 50);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Recovery Pin:";
+            this.label6.Text = "Name of your\r\nfirst pet?";
             // 
             // textUsername
             // 
@@ -143,6 +133,7 @@
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(300, 30);
             this.textUsername.TabIndex = 11;
+            this.textUsername.TextChanged += new System.EventHandler(this.textUsername_TextChanged);
             // 
             // textPassword
             // 
@@ -152,24 +143,27 @@
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(300, 30);
             this.textPassword.TabIndex = 12;
+            this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
             // 
-            // textConPassword
+            // textConfirmPassword
             // 
-            this.textConPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textConPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textConPassword.Location = new System.Drawing.Point(631, 265);
-            this.textConPassword.Name = "textConPassword";
-            this.textConPassword.Size = new System.Drawing.Size(300, 30);
-            this.textConPassword.TabIndex = 13;
+            this.textConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textConfirmPassword.Location = new System.Drawing.Point(631, 265);
+            this.textConfirmPassword.Name = "textConfirmPassword";
+            this.textConfirmPassword.Size = new System.Drawing.Size(300, 30);
+            this.textConfirmPassword.TabIndex = 13;
+            this.textConfirmPassword.TextChanged += new System.EventHandler(this.textConfirmPassword_TextChanged);
             // 
-            // textRecoveryPin
+            // textFavPet
             // 
-            this.textRecoveryPin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textRecoveryPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textRecoveryPin.Location = new System.Drawing.Point(631, 351);
-            this.textRecoveryPin.Name = "textRecoveryPin";
-            this.textRecoveryPin.Size = new System.Drawing.Size(300, 30);
-            this.textRecoveryPin.TabIndex = 14;
+            this.textFavPet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textFavPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textFavPet.Location = new System.Drawing.Point(631, 341);
+            this.textFavPet.Name = "textFavPet";
+            this.textFavPet.Size = new System.Drawing.Size(300, 30);
+            this.textFavPet.TabIndex = 14;
+            this.textFavPet.TextChanged += new System.EventHandler(this.textFavPet_TextChanged);
             // 
             // label7
             // 
@@ -187,7 +181,8 @@
             this.btnSignIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSignIn.BackColor = System.Drawing.Color.LightGreen;
             this.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSignIn.FlatAppearance.BorderSize = 0;
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSignIn.Location = new System.Drawing.Point(631, 458);
@@ -197,22 +192,6 @@
             this.btnSignIn.Text = "Create Account";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // Login
-            // 
-            this.Login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Login.BackColor = System.Drawing.Color.LightBlue;
-            this.Login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Login.Location = new System.Drawing.Point(81, 458);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(241, 46);
-            this.Login.TabIndex = 17;
-            this.Login.Text = "Log in";
-            this.Login.UseVisualStyleBackColor = false;
-            this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // label8
             // 
@@ -226,17 +205,41 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Already have an account?\r\n";
             // 
+            // createAcc
+            // 
+            this.createAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.createAcc.AutoSize = true;
+            this.createAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAcc.Location = new System.Drawing.Point(280, 426);
+            this.createAcc.Name = "createAcc";
+            this.createAcc.Size = new System.Drawing.Size(65, 22);
+            this.createAcc.TabIndex = 25;
+            this.createAcc.TabStop = true;
+            this.createAcc.Text = "Log In";
+            this.createAcc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAcc_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::PetAppointment.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(54, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // SignIn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(998, 577);
+            this.Controls.Add(this.createAcc);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.Login);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textRecoveryPin);
-            this.Controls.Add(this.textConPassword);
+            this.Controls.Add(this.textFavPet);
+            this.Controls.Add(this.textConfirmPassword);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textUsername);
             this.Controls.Add(this.label6);
@@ -270,11 +273,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textUsername;
         private System.Windows.Forms.TextBox textPassword;
-        private System.Windows.Forms.TextBox textConPassword;
-        private System.Windows.Forms.TextBox textRecoveryPin;
+        private System.Windows.Forms.TextBox textConfirmPassword;
+        private System.Windows.Forms.TextBox textFavPet;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSignIn;
-        private System.Windows.Forms.Button Login;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel createAcc;
     }
 }

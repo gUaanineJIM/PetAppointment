@@ -105,5 +105,12 @@ namespace PetAppointment
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            LoginAcc loginAcc = new LoginAcc();
+            loginAcc.Show();
+            this.Close();
+        }
     }
 }

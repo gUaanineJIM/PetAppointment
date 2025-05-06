@@ -37,51 +37,34 @@
             this.textPetId = new System.Windows.Forms.TextBox();
             this.textVetId = new System.Windows.Forms.TextBox();
             this.texStaffId = new System.Windows.Forms.TextBox();
-            this.textReasonofVisit = new System.Windows.Forms.TextBox();
             this.textDate = new System.Windows.Forms.TextBox();
             this.texTime = new System.Windows.Forms.TextBox();
             this.Time = new System.Windows.Forms.Label();
-            this.petList = new System.Windows.Forms.DataGridView();
-            this.pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vetList = new System.Windows.Forms.DataGridView();
-            this.vet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vetLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialization = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.petLists = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.staffList = new System.Windows.Forms.Label();
-            this.VetDoctor = new System.Windows.Forms.Button();
-            this.AddTreatments = new System.Windows.Forms.Button();
-            this.RegisterOwner = new System.Windows.Forms.Button();
-            this.AddStaff = new System.Windows.Forms.Button();
-            this.RegisterPet = new System.Windows.Forms.Button();
-            this.RecordBills = new System.Windows.Forms.Button();
-            this.exit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.schedAppointment = new System.Windows.Forms.Button();
             this.appointmentList = new System.Windows.Forms.DataGridView();
-            this.appointment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointment_pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointment_vet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointment_staff_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointment_reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointment_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointment_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.New = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.petList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vetList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.Dashboard = new System.Windows.Forms.Button();
+            this.VetListBTN = new System.Windows.Forms.Button();
+            this.StaffListBTN = new System.Windows.Forms.Button();
+            this.textReasonofVisit = new System.Windows.Forms.RichTextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.historyBTN = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.createAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerPetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerPetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerNewDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.petLists)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ScheduleAppointmentlabel
@@ -89,7 +72,7 @@
             this.ScheduleAppointmentlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ScheduleAppointmentlabel.AutoSize = true;
             this.ScheduleAppointmentlabel.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScheduleAppointmentlabel.Location = new System.Drawing.Point(648, 8);
+            this.ScheduleAppointmentlabel.Location = new System.Drawing.Point(580, 49);
             this.ScheduleAppointmentlabel.Name = "ScheduleAppointmentlabel";
             this.ScheduleAppointmentlabel.Size = new System.Drawing.Size(417, 42);
             this.ScheduleAppointmentlabel.TabIndex = 0;
@@ -101,7 +84,7 @@
             this.idpet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.idpet.AutoSize = true;
             this.idpet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idpet.Location = new System.Drawing.Point(213, 70);
+            this.idpet.Location = new System.Drawing.Point(47, 106);
             this.idpet.Name = "idpet";
             this.idpet.Size = new System.Drawing.Size(75, 25);
             this.idpet.TabIndex = 1;
@@ -114,7 +97,7 @@
             this.VetId.AutoSize = true;
             this.VetId.CausesValidation = false;
             this.VetId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VetId.Location = new System.Drawing.Point(536, 70);
+            this.VetId.Location = new System.Drawing.Point(47, 209);
             this.VetId.Name = "VetId";
             this.VetId.Size = new System.Drawing.Size(76, 25);
             this.VetId.TabIndex = 2;
@@ -126,7 +109,7 @@
             this.StaffId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.StaffId.AutoSize = true;
             this.StaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffId.Location = new System.Drawing.Point(850, 70);
+            this.StaffId.Location = new System.Drawing.Point(266, 106);
             this.StaffId.Name = "StaffId";
             this.StaffId.Size = new System.Drawing.Size(88, 25);
             this.StaffId.TabIndex = 3;
@@ -138,7 +121,7 @@
             this.ReasonofVisit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ReasonofVisit.AutoSize = true;
             this.ReasonofVisit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReasonofVisit.Location = new System.Drawing.Point(213, 147);
+            this.ReasonofVisit.Location = new System.Drawing.Point(257, 167);
             this.ReasonofVisit.Name = "ReasonofVisit";
             this.ReasonofVisit.Size = new System.Drawing.Size(164, 25);
             this.ReasonofVisit.TabIndex = 4;
@@ -150,7 +133,7 @@
             this.date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(536, 147);
+            this.date.Location = new System.Drawing.Point(602, 187);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(64, 25);
             this.date.TabIndex = 5;
@@ -161,9 +144,9 @@
             // 
             this.textPetId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textPetId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPetId.Location = new System.Drawing.Point(218, 98);
+            this.textPetId.Location = new System.Drawing.Point(51, 139);
             this.textPetId.Name = "textPetId";
-            this.textPetId.Size = new System.Drawing.Size(299, 30);
+            this.textPetId.Size = new System.Drawing.Size(159, 30);
             this.textPetId.TabIndex = 6;
             this.textPetId.TextChanged += new System.EventHandler(this.textPetId_TextChanged);
             // 
@@ -171,9 +154,9 @@
             // 
             this.textVetId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textVetId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textVetId.Location = new System.Drawing.Point(541, 98);
+            this.textVetId.Location = new System.Drawing.Point(52, 237);
             this.textVetId.Name = "textVetId";
-            this.textVetId.Size = new System.Drawing.Size(299, 30);
+            this.textVetId.Size = new System.Drawing.Size(159, 30);
             this.textVetId.TabIndex = 7;
             this.textVetId.TextChanged += new System.EventHandler(this.textVetId_TextChanged);
             // 
@@ -181,30 +164,19 @@
             // 
             this.texStaffId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.texStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texStaffId.Location = new System.Drawing.Point(855, 98);
+            this.texStaffId.Location = new System.Drawing.Point(262, 134);
             this.texStaffId.Name = "texStaffId";
-            this.texStaffId.Size = new System.Drawing.Size(299, 30);
+            this.texStaffId.Size = new System.Drawing.Size(159, 30);
             this.texStaffId.TabIndex = 8;
             this.texStaffId.TextChanged += new System.EventHandler(this.texStaffId_TextChanged);
-            // 
-            // textReasonofVisit
-            // 
-            this.textReasonofVisit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textReasonofVisit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textReasonofVisit.Location = new System.Drawing.Point(218, 175);
-            this.textReasonofVisit.Name = "textReasonofVisit";
-            this.textReasonofVisit.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textReasonofVisit.Size = new System.Drawing.Size(299, 30);
-            this.textReasonofVisit.TabIndex = 9;
-            this.textReasonofVisit.TextChanged += new System.EventHandler(this.textReasonofVisit_TextChanged);
             // 
             // textDate
             // 
             this.textDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDate.Location = new System.Drawing.Point(541, 175);
+            this.textDate.Location = new System.Drawing.Point(672, 187);
             this.textDate.Name = "textDate";
-            this.textDate.Size = new System.Drawing.Size(299, 30);
+            this.textDate.Size = new System.Drawing.Size(235, 30);
             this.textDate.TabIndex = 10;
             this.textDate.TextChanged += new System.EventHandler(this.textDate_TextChanged);
             // 
@@ -212,9 +184,9 @@
             // 
             this.texTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.texTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texTime.Location = new System.Drawing.Point(855, 175);
+            this.texTime.Location = new System.Drawing.Point(672, 237);
             this.texTime.Name = "texTime";
-            this.texTime.Size = new System.Drawing.Size(299, 30);
+            this.texTime.Size = new System.Drawing.Size(235, 30);
             this.texTime.TabIndex = 12;
             this.texTime.TextChanged += new System.EventHandler(this.texTime_TextChanged);
             // 
@@ -223,368 +195,63 @@
             this.Time.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Time.AutoSize = true;
             this.Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time.Location = new System.Drawing.Point(850, 147);
+            this.Time.Location = new System.Drawing.Point(599, 240);
             this.Time.Name = "Time";
             this.Time.Size = new System.Drawing.Size(67, 25);
             this.Time.TabIndex = 11;
             this.Time.Text = "Time:";
             this.Time.Click += new System.EventHandler(this.Time_Click);
             // 
-            // petList
+            // petLists
             // 
-            this.petList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.petList.BackgroundColor = System.Drawing.Color.White;
-            this.petList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.petList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.petList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.pet_id,
-            this.name});
-            this.petList.Location = new System.Drawing.Point(200, 312);
-            this.petList.Name = "petList";
-            this.petList.RowHeadersWidth = 51;
-            this.petList.RowTemplate.Height = 24;
-            this.petList.Size = new System.Drawing.Size(299, 527);
-            this.petList.TabIndex = 17;
-            this.petList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // pet_id
-            // 
-            this.pet_id.HeaderText = "Pet Id";
-            this.pet_id.MinimumWidth = 6;
-            this.pet_id.Name = "pet_id";
-            this.pet_id.Width = 125;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.Width = 125;
-            // 
-            // vetList
-            // 
-            this.vetList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vetList.BackgroundColor = System.Drawing.Color.White;
-            this.vetList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.vetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vetList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.vet_id,
-            this.vetLastName,
-            this.specialization});
-            this.vetList.Location = new System.Drawing.Point(506, 596);
-            this.vetList.Name = "vetList";
-            this.vetList.RowHeadersWidth = 51;
-            this.vetList.RowTemplate.Height = 24;
-            this.vetList.Size = new System.Drawing.Size(499, 243);
-            this.vetList.TabIndex = 18;
-            this.vetList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // vet_id
-            // 
-            this.vet_id.HeaderText = "Vet id";
-            this.vet_id.MinimumWidth = 6;
-            this.vet_id.Name = "vet_id";
-            this.vet_id.Width = 125;
-            // 
-            // vetLastName
-            // 
-            this.vetLastName.HeaderText = "last_name";
-            this.vetLastName.MinimumWidth = 6;
-            this.vetLastName.Name = "vetLastName";
-            this.vetLastName.Width = 125;
-            // 
-            // specialization
-            // 
-            this.specialization.HeaderText = "specialization";
-            this.specialization.MinimumWidth = 6;
-            this.specialization.Name = "specialization";
-            this.specialization.Width = 125;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.staffFirstName,
-            this.staffLastName});
-            this.dataGridView3.Location = new System.Drawing.Point(1011, 596);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(457, 243);
-            this.dataGridView3.TabIndex = 19;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "staff_id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // staffFirstName
-            // 
-            this.staffFirstName.HeaderText = "First Name";
-            this.staffFirstName.MinimumWidth = 6;
-            this.staffFirstName.Name = "staffFirstName";
-            this.staffFirstName.Width = 125;
-            // 
-            // staffLastName
-            // 
-            this.staffLastName.HeaderText = "Last Name";
-            this.staffLastName.MinimumWidth = 6;
-            this.staffLastName.Name = "staffLastName";
-            this.staffLastName.Width = 125;
+            this.petLists.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.petLists.BackgroundColor = System.Drawing.Color.White;
+            this.petLists.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.petLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.petLists.Location = new System.Drawing.Point(25, 374);
+            this.petLists.Name = "petLists";
+            this.petLists.RowHeadersWidth = 25;
+            this.petLists.RowTemplate.Height = 24;
+            this.petLists.Size = new System.Drawing.Size(517, 465);
+            this.petLists.TabIndex = 17;
+            this.petLists.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(299, 284);
+            this.label1.Location = new System.Drawing.Point(20, 346);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Pet List";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(735, 568);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Vet List";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // staffList
-            // 
-            this.staffList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.staffList.AutoSize = true;
-            this.staffList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.staffList.Location = new System.Drawing.Point(1195, 568);
-            this.staffList.Name = "staffList";
-            this.staffList.Size = new System.Drawing.Size(97, 25);
-            this.staffList.TabIndex = 22;
-            this.staffList.Text = "Staff List";
-            this.staffList.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // VetDoctor
-            // 
-            this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.Transparent;
-            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VetDoctor.Location = new System.Drawing.Point(17, 427);
-            this.VetDoctor.Name = "VetDoctor";
-            this.VetDoctor.Size = new System.Drawing.Size(150, 35);
-            this.VetDoctor.TabIndex = 10;
-            this.VetDoctor.Text = "Vet Doctor";
-            this.VetDoctor.UseVisualStyleBackColor = false;
-            this.VetDoctor.Click += new System.EventHandler(this.VetDoctor_Click);
-            // 
-            // AddTreatments
-            // 
-            this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.Transparent;
-            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddTreatments.Location = new System.Drawing.Point(17, 478);
-            this.AddTreatments.Name = "AddTreatments";
-            this.AddTreatments.Size = new System.Drawing.Size(150, 35);
-            this.AddTreatments.TabIndex = 11;
-            this.AddTreatments.Text = "Treatment";
-            this.AddTreatments.UseVisualStyleBackColor = false;
-            this.AddTreatments.Click += new System.EventHandler(this.AddTreatments_Click);
-            // 
-            // RegisterOwner
-            // 
-            this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterOwner.BackColor = System.Drawing.Color.Transparent;
-            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterOwner.Location = new System.Drawing.Point(17, 318);
-            this.RegisterOwner.Name = "RegisterOwner";
-            this.RegisterOwner.Size = new System.Drawing.Size(150, 35);
-            this.RegisterOwner.TabIndex = 8;
-            this.RegisterOwner.Text = "Register Owner";
-            this.RegisterOwner.UseVisualStyleBackColor = false;
-            this.RegisterOwner.Click += new System.EventHandler(this.RegisterOwner_Click);
-            // 
-            // AddStaff
-            // 
-            this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.Transparent;
-            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStaff.Location = new System.Drawing.Point(17, 529);
-            this.AddStaff.Name = "AddStaff";
-            this.AddStaff.Size = new System.Drawing.Size(150, 35);
-            this.AddStaff.TabIndex = 12;
-            this.AddStaff.Text = "Add Staff";
-            this.AddStaff.UseVisualStyleBackColor = false;
-            this.AddStaff.Click += new System.EventHandler(this.AddStaff_Click);
-            // 
-            // RegisterPet
-            // 
-            this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterPet.BackColor = System.Drawing.Color.Transparent;
-            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterPet.Location = new System.Drawing.Point(17, 372);
-            this.RegisterPet.Name = "RegisterPet";
-            this.RegisterPet.Size = new System.Drawing.Size(150, 35);
-            this.RegisterPet.TabIndex = 9;
-            this.RegisterPet.Text = "Register Pet";
-            this.RegisterPet.UseVisualStyleBackColor = false;
-            this.RegisterPet.Click += new System.EventHandler(this.RegisterPet_Click);
-            // 
-            // RecordBills
-            // 
-            this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecordBills.BackColor = System.Drawing.Color.Transparent;
-            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordBills.Location = new System.Drawing.Point(17, 580);
-            this.RecordBills.Name = "RecordBills";
-            this.RecordBills.Size = new System.Drawing.Size(150, 35);
-            this.RecordBills.TabIndex = 13;
-            this.RecordBills.Text = "Record Bills";
-            this.RecordBills.UseVisualStyleBackColor = false;
-            this.RecordBills.Click += new System.EventHandler(this.RecordBills_Click);
-            // 
-            // exit
-            // 
-            this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.exit.BackColor = System.Drawing.Color.Crimson;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.ForeColor = System.Drawing.SystemColors.Control;
-            this.exit.Location = new System.Drawing.Point(17, 744);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(150, 35);
-            this.exit.TabIndex = 15;
-            this.exit.Text = "Log Out";
-            this.exit.UseVisualStyleBackColor = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightPink;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.exit);
-            this.panel1.Controls.Add(this.schedAppointment);
-            this.panel1.Controls.Add(this.RecordBills);
-            this.panel1.Controls.Add(this.RegisterPet);
-            this.panel1.Controls.Add(this.AddStaff);
-            this.panel1.Controls.Add(this.RegisterOwner);
-            this.panel1.Controls.Add(this.AddTreatments);
-            this.panel1.Controls.Add(this.VetDoctor);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 894);
-            this.panel1.TabIndex = 13;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // schedAppointment
-            // 
-            this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.schedAppointment.BackColor = System.Drawing.Color.HotPink;
-            this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.schedAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schedAppointment.Location = new System.Drawing.Point(17, 85);
-            this.schedAppointment.Name = "schedAppointment";
-            this.schedAppointment.Size = new System.Drawing.Size(150, 82);
-            this.schedAppointment.TabIndex = 14;
-            this.schedAppointment.Text = "Appointment";
-            this.schedAppointment.UseVisualStyleBackColor = false;
-            this.schedAppointment.Click += new System.EventHandler(this.button1_Click);
-            // 
             // appointmentList
             // 
+            this.appointmentList.AllowUserToDeleteRows = false;
             this.appointmentList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.appointmentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.appointmentList.BackgroundColor = System.Drawing.Color.White;
             this.appointmentList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.appointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.appointmentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.appointment_id,
-            this.appointment_pet_id,
-            this.appointment_vet_id,
-            this.appointment_staff_id,
-            this.appointment_reason,
-            this.appointment_date,
-            this.appointment_time});
-            this.appointmentList.Location = new System.Drawing.Point(506, 312);
+            this.appointmentList.Location = new System.Drawing.Point(548, 374);
             this.appointmentList.Name = "appointmentList";
+            this.appointmentList.ReadOnly = true;
             this.appointmentList.RowHeadersWidth = 51;
             this.appointmentList.RowTemplate.Height = 24;
-            this.appointmentList.Size = new System.Drawing.Size(962, 253);
+            this.appointmentList.Size = new System.Drawing.Size(920, 465);
             this.appointmentList.TabIndex = 23;
+            this.appointmentList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentList_CellClick);
             this.appointmentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentList_CellContentClick);
-            // 
-            // appointment_id
-            // 
-            this.appointment_id.HeaderText = "Appointment ID";
-            this.appointment_id.MinimumWidth = 6;
-            this.appointment_id.Name = "appointment_id";
-            this.appointment_id.Width = 125;
-            // 
-            // appointment_pet_id
-            // 
-            this.appointment_pet_id.HeaderText = "Pet Id";
-            this.appointment_pet_id.MinimumWidth = 6;
-            this.appointment_pet_id.Name = "appointment_pet_id";
-            this.appointment_pet_id.Width = 125;
-            // 
-            // appointment_vet_id
-            // 
-            this.appointment_vet_id.HeaderText = "Vet Id";
-            this.appointment_vet_id.MinimumWidth = 6;
-            this.appointment_vet_id.Name = "appointment_vet_id";
-            this.appointment_vet_id.Width = 125;
-            // 
-            // appointment_staff_id
-            // 
-            this.appointment_staff_id.HeaderText = "Staff Id";
-            this.appointment_staff_id.MinimumWidth = 6;
-            this.appointment_staff_id.Name = "appointment_staff_id";
-            this.appointment_staff_id.Width = 125;
-            // 
-            // appointment_reason
-            // 
-            this.appointment_reason.HeaderText = "Reason";
-            this.appointment_reason.MinimumWidth = 6;
-            this.appointment_reason.Name = "appointment_reason";
-            this.appointment_reason.Width = 125;
-            // 
-            // appointment_date
-            // 
-            this.appointment_date.HeaderText = "Date";
-            this.appointment_date.MinimumWidth = 6;
-            this.appointment_date.Name = "appointment_date";
-            this.appointment_date.Width = 125;
-            // 
-            // appointment_time
-            // 
-            this.appointment_time.HeaderText = "Time";
-            this.appointment_time.MinimumWidth = 6;
-            this.appointment_time.Name = "appointment_time";
-            this.appointment_time.Width = 125;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(667, 284);
+            this.label4.Location = new System.Drawing.Point(567, 346);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 25);
             this.label4.TabIndex = 24;
@@ -597,12 +264,13 @@
             this.Delete.BackColor = System.Drawing.Color.HotPink;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(1333, 166);
+            this.Delete.Location = new System.Drawing.Point(1113, 219);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(108, 48);
             this.Delete.TabIndex = 63;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Update
             // 
@@ -610,12 +278,13 @@
             this.Update.BackColor = System.Drawing.Color.HotPink;
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(1333, 89);
+            this.Update.Location = new System.Drawing.Point(1113, 144);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(108, 48);
             this.Update.TabIndex = 62;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // New
             // 
@@ -623,12 +292,13 @@
             this.New.BackColor = System.Drawing.Color.HotPink;
             this.New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(1200, 166);
+            this.New.Location = new System.Drawing.Point(976, 217);
             this.New.Name = "New";
             this.New.Size = new System.Drawing.Size(108, 48);
             this.New.TabIndex = 61;
             this.New.Text = "New";
             this.New.UseVisualStyleBackColor = false;
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // Add
             // 
@@ -636,12 +306,169 @@
             this.Add.BackColor = System.Drawing.Color.HotPink;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(1200, 89);
+            this.Add.Location = new System.Drawing.Point(976, 144);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(108, 48);
             this.Add.TabIndex = 60;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // Dashboard
+            // 
+            this.Dashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Dashboard.BackColor = System.Drawing.Color.LightPink;
+            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.Location = new System.Drawing.Point(20, 50);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(119, 35);
+            this.Dashboard.TabIndex = 16;
+            this.Dashboard.Text = "Back";
+            this.Dashboard.UseVisualStyleBackColor = false;
+            this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
+            // 
+            // VetListBTN
+            // 
+            this.VetListBTN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.VetListBTN.BackColor = System.Drawing.Color.LightGreen;
+            this.VetListBTN.FlatAppearance.BorderSize = 0;
+            this.VetListBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VetListBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VetListBTN.Location = new System.Drawing.Point(1292, 61);
+            this.VetListBTN.Name = "VetListBTN";
+            this.VetListBTN.Size = new System.Drawing.Size(174, 48);
+            this.VetListBTN.TabIndex = 64;
+            this.VetListBTN.Text = "View Doctors";
+            this.VetListBTN.UseVisualStyleBackColor = false;
+            this.VetListBTN.Click += new System.EventHandler(this.VetListBTN_Click);
+            // 
+            // StaffListBTN
+            // 
+            this.StaffListBTN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.StaffListBTN.BackColor = System.Drawing.Color.LightGreen;
+            this.StaffListBTN.FlatAppearance.BorderSize = 0;
+            this.StaffListBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StaffListBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffListBTN.Location = new System.Drawing.Point(1292, 124);
+            this.StaffListBTN.Name = "StaffListBTN";
+            this.StaffListBTN.Size = new System.Drawing.Size(174, 48);
+            this.StaffListBTN.TabIndex = 65;
+            this.StaffListBTN.Text = "View Staffs";
+            this.StaffListBTN.UseVisualStyleBackColor = false;
+            this.StaffListBTN.Click += new System.EventHandler(this.StaffListBTN_Click);
+            // 
+            // textReasonofVisit
+            // 
+            this.textReasonofVisit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textReasonofVisit.Location = new System.Drawing.Point(262, 197);
+            this.textReasonofVisit.Name = "textReasonofVisit";
+            this.textReasonofVisit.Size = new System.Drawing.Size(299, 116);
+            this.textReasonofVisit.TabIndex = 66;
+            this.textReasonofVisit.Text = "";
+            this.textReasonofVisit.TextChanged += new System.EventHandler(this.textReasonofVisit_TextChanged_1);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.LightPink;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(603, 132);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2109, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(341, 30);
+            this.dateTimePicker1.TabIndex = 67;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // historyBTN
+            // 
+            this.historyBTN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.historyBTN.BackColor = System.Drawing.Color.LightGreen;
+            this.historyBTN.FlatAppearance.BorderSize = 0;
+            this.historyBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.historyBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historyBTN.Location = new System.Drawing.Point(1292, 187);
+            this.historyBTN.Name = "historyBTN";
+            this.historyBTN.Size = new System.Drawing.Size(174, 48);
+            this.historyBTN.TabIndex = 68;
+            this.historyBTN.Text = "History\r\n";
+            this.historyBTN.UseVisualStyleBackColor = false;
+            this.historyBTN.Click += new System.EventHandler(this.historyBTN_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Pink;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createAppointmentToolStripMenuItem,
+            this.registerPetToolStripMenuItem,
+            this.registerPetToolStripMenuItem1,
+            this.registerNewDoctorToolStripMenuItem,
+            this.createTreatmentToolStripMenuItem,
+            this.recordBillsToolStripMenuItem,
+            this.registerStaffToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1482, 31);
+            this.menuStrip1.TabIndex = 69;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // createAppointmentToolStripMenuItem
+            // 
+            this.createAppointmentToolStripMenuItem.BackColor = System.Drawing.Color.HotPink;
+            this.createAppointmentToolStripMenuItem.Name = "createAppointmentToolStripMenuItem";
+            this.createAppointmentToolStripMenuItem.Size = new System.Drawing.Size(189, 27);
+            this.createAppointmentToolStripMenuItem.Text = "Create Appointment";
+            this.createAppointmentToolStripMenuItem.Click += new System.EventHandler(this.createAppointmentToolStripMenuItem_Click);
+            // 
+            // registerPetToolStripMenuItem
+            // 
+            this.registerPetToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerPetToolStripMenuItem.Name = "registerPetToolStripMenuItem";
+            this.registerPetToolStripMenuItem.Size = new System.Drawing.Size(148, 27);
+            this.registerPetToolStripMenuItem.Text = "Register Owner";
+            this.registerPetToolStripMenuItem.Click += new System.EventHandler(this.registerPetToolStripMenuItem_Click);
+            // 
+            // registerPetToolStripMenuItem1
+            // 
+            this.registerPetToolStripMenuItem1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerPetToolStripMenuItem1.Name = "registerPetToolStripMenuItem1";
+            this.registerPetToolStripMenuItem1.Size = new System.Drawing.Size(120, 27);
+            this.registerPetToolStripMenuItem1.Text = "Register Pet";
+            this.registerPetToolStripMenuItem1.Click += new System.EventHandler(this.registerPetToolStripMenuItem1_Click);
+            // 
+            // registerNewDoctorToolStripMenuItem
+            // 
+            this.registerNewDoctorToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerNewDoctorToolStripMenuItem.Name = "registerNewDoctorToolStripMenuItem";
+            this.registerNewDoctorToolStripMenuItem.Size = new System.Drawing.Size(150, 27);
+            this.registerNewDoctorToolStripMenuItem.Text = "Register Doctor";
+            this.registerNewDoctorToolStripMenuItem.Click += new System.EventHandler(this.registerNewDoctorToolStripMenuItem_Click);
+            // 
+            // createTreatmentToolStripMenuItem
+            // 
+            this.createTreatmentToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.createTreatmentToolStripMenuItem.Name = "createTreatmentToolStripMenuItem";
+            this.createTreatmentToolStripMenuItem.Size = new System.Drawing.Size(164, 27);
+            this.createTreatmentToolStripMenuItem.Text = "Create Treatment";
+            this.createTreatmentToolStripMenuItem.Click += new System.EventHandler(this.createTreatmentToolStripMenuItem_Click);
+            // 
+            // recordBillsToolStripMenuItem
+            // 
+            this.recordBillsToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.recordBillsToolStripMenuItem.Name = "recordBillsToolStripMenuItem";
+            this.recordBillsToolStripMenuItem.Size = new System.Drawing.Size(118, 27);
+            this.recordBillsToolStripMenuItem.Text = "Record Bills";
+            this.recordBillsToolStripMenuItem.Click += new System.EventHandler(this.recordBillsToolStripMenuItem_Click);
+            // 
+            // registerStaffToolStripMenuItem
+            // 
+            this.registerStaffToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerStaffToolStripMenuItem.Name = "registerStaffToolStripMenuItem";
+            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(135, 27);
+            this.registerStaffToolStripMenuItem.Text = "Register Staff";
+            this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
             // ScheduleAppointment
             // 
@@ -649,23 +476,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.historyBTN);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textReasonofVisit);
+            this.Controls.Add(this.StaffListBTN);
+            this.Controls.Add(this.VetListBTN);
+            this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.New);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.appointmentList);
-            this.Controls.Add(this.staffList);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.vetList);
-            this.Controls.Add(this.petList);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.petLists);
             this.Controls.Add(this.texTime);
             this.Controls.Add(this.Time);
             this.Controls.Add(this.textDate);
-            this.Controls.Add(this.textReasonofVisit);
             this.Controls.Add(this.texStaffId);
             this.Controls.Add(this.textVetId);
             this.Controls.Add(this.textPetId);
@@ -675,17 +502,17 @@
             this.Controls.Add(this.VetId);
             this.Controls.Add(this.idpet);
             this.Controls.Add(this.ScheduleAppointmentlabel);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(1500, 940);
             this.Name = "ScheduleAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScheduleAppointment";
             this.Load += new System.EventHandler(this.ScheduleAppointment_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.petList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vetList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.petLists)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -702,45 +529,30 @@
         private System.Windows.Forms.TextBox textPetId;
         private System.Windows.Forms.TextBox textVetId;
         private System.Windows.Forms.TextBox texStaffId;
-        private System.Windows.Forms.TextBox textReasonofVisit;
         private System.Windows.Forms.TextBox textDate;
         private System.Windows.Forms.TextBox texTime;
         private System.Windows.Forms.Label Time;
-        private System.Windows.Forms.DataGridView petList;
-        private System.Windows.Forms.DataGridView vetList;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView petLists;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label staffList;
-        private System.Windows.Forms.Button VetDoctor;
-        private System.Windows.Forms.Button AddTreatments;
-        private System.Windows.Forms.Button RegisterOwner;
-        private System.Windows.Forms.Button AddStaff;
-        private System.Windows.Forms.Button RegisterPet;
-        private System.Windows.Forms.Button RecordBills;
-        private System.Windows.Forms.Button exit;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pet_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vet_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vetLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialization;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn staffFirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn staffLastName;
         private System.Windows.Forms.DataGridView appointmentList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_pet_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_vet_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_staff_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_reason;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointment_time;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button schedAppointment;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button New;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Dashboard;
+        private System.Windows.Forms.Button VetListBTN;
+        private System.Windows.Forms.Button StaffListBTN;
+        private System.Windows.Forms.RichTextBox textReasonofVisit;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button historyBTN;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem createAppointmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerPetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerPetToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem registerNewDoctorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createTreatmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recordBillsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
     }
 }

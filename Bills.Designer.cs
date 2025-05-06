@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.schedAppointment = new System.Windows.Forms.Button();
-            this.RecordBills = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBillStatus = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,25 +35,9 @@
             this.textbillAppointmentId = new System.Windows.Forms.TextBox();
             this.labelfname = new System.Windows.Forms.Label();
             this.ScheduleAppointmentlabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.exit = new System.Windows.Forms.Button();
-            this.RegisterPet = new System.Windows.Forms.Button();
-            this.AddStaff = new System.Windows.Forms.Button();
-            this.RegisterOwner = new System.Windows.Forms.Button();
-            this.AddTreatments = new System.Windows.Forms.Button();
-            this.VetDoctor = new System.Windows.Forms.Button();
-            this.appointmentList = new System.Windows.Forms.DataGridView();
-            this.bill_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bill_appointment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bill_total_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bill_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billsList = new System.Windows.Forms.DataGridView();
             this.textTotalCost = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.treatment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treatment_appointment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treatment_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medication = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentList = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
@@ -64,46 +46,28 @@
             this.Find = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.staffIdSearch = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Dashboard = new System.Windows.Forms.Button();
+            this.paidbtn = new System.Windows.Forms.Button();
+            this.unpaidbtn = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.createAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerPetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerPetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerNewDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.billsList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatmentList)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // schedAppointment
-            // 
-            this.schedAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.schedAppointment.BackColor = System.Drawing.Color.Transparent;
-            this.schedAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.schedAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.schedAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schedAppointment.Location = new System.Drawing.Point(17, 85);
-            this.schedAppointment.Name = "schedAppointment";
-            this.schedAppointment.Size = new System.Drawing.Size(150, 82);
-            this.schedAppointment.TabIndex = 14;
-            this.schedAppointment.Text = "Appointment";
-            this.schedAppointment.UseVisualStyleBackColor = false;
-            this.schedAppointment.Click += new System.EventHandler(this.schedAppointment_Click);
-            // 
-            // RecordBills
-            // 
-            this.RecordBills.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecordBills.BackColor = System.Drawing.Color.HotPink;
-            this.RecordBills.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RecordBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordBills.Location = new System.Drawing.Point(17, 580);
-            this.RecordBills.Name = "RecordBills";
-            this.RecordBills.Size = new System.Drawing.Size(150, 35);
-            this.RecordBills.TabIndex = 13;
-            this.RecordBills.Text = "Record Bills";
-            this.RecordBills.UseVisualStyleBackColor = false;
-            this.RecordBills.Click += new System.EventHandler(this.RecordBills_Click);
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(968, 83);
+            this.label4.Location = new System.Drawing.Point(535, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 77;
@@ -113,18 +77,19 @@
             // 
             this.textBillStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBillStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBillStatus.Location = new System.Drawing.Point(244, 500);
+            this.textBillStatus.Location = new System.Drawing.Point(87, 512);
             this.textBillStatus.MaxLength = 11;
             this.textBillStatus.Name = "textBillStatus";
             this.textBillStatus.Size = new System.Drawing.Size(299, 30);
             this.textBillStatus.TabIndex = 75;
+            this.textBillStatus.TextChanged += new System.EventHandler(this.textBillStatus_TextChanged);
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(239, 472);
+            this.label1.Location = new System.Drawing.Point(79, 484);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 74;
@@ -135,7 +100,7 @@
             this.lname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lname.AutoSize = true;
             this.lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lname.Location = new System.Drawing.Point(239, 384);
+            this.lname.Location = new System.Drawing.Point(79, 396);
             this.lname.Name = "lname";
             this.lname.Size = new System.Drawing.Size(236, 25);
             this.lname.TabIndex = 72;
@@ -145,17 +110,18 @@
             // 
             this.textbillAppointmentId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textbillAppointmentId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbillAppointmentId.Location = new System.Drawing.Point(244, 324);
+            this.textbillAppointmentId.Location = new System.Drawing.Point(84, 336);
             this.textbillAppointmentId.Name = "textbillAppointmentId";
             this.textbillAppointmentId.Size = new System.Drawing.Size(299, 30);
             this.textbillAppointmentId.TabIndex = 71;
+            this.textbillAppointmentId.TextChanged += new System.EventHandler(this.textbillAppointmentId_TextChanged);
             // 
             // labelfname
             // 
             this.labelfname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelfname.AutoSize = true;
             this.labelfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfname.Location = new System.Drawing.Point(239, 296);
+            this.labelfname.Location = new System.Drawing.Point(79, 308);
             this.labelfname.Name = "labelfname";
             this.labelfname.Size = new System.Drawing.Size(164, 25);
             this.labelfname.TabIndex = 70;
@@ -166,233 +132,62 @@
             this.ScheduleAppointmentlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ScheduleAppointmentlabel.AutoSize = true;
             this.ScheduleAppointmentlabel.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScheduleAppointmentlabel.Location = new System.Drawing.Point(698, 22);
+            this.ScheduleAppointmentlabel.Location = new System.Drawing.Point(627, 50);
             this.ScheduleAppointmentlabel.Name = "ScheduleAppointmentlabel";
             this.ScheduleAppointmentlabel.Size = new System.Drawing.Size(229, 42);
             this.ScheduleAppointmentlabel.TabIndex = 69;
             this.ScheduleAppointmentlabel.Text = "Record Bills";
             // 
-            // panel1
+            // billsList
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightPink;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.exit);
-            this.panel1.Controls.Add(this.schedAppointment);
-            this.panel1.Controls.Add(this.RecordBills);
-            this.panel1.Controls.Add(this.RegisterPet);
-            this.panel1.Controls.Add(this.AddStaff);
-            this.panel1.Controls.Add(this.RegisterOwner);
-            this.panel1.Controls.Add(this.AddTreatments);
-            this.panel1.Controls.Add(this.VetDoctor);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 894);
-            this.panel1.TabIndex = 68;
-            // 
-            // exit
-            // 
-            this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.exit.BackColor = System.Drawing.Color.Crimson;
-            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.ForeColor = System.Drawing.SystemColors.Control;
-            this.exit.Location = new System.Drawing.Point(17, 744);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(150, 35);
-            this.exit.TabIndex = 15;
-            this.exit.Text = "Log Out";
-            this.exit.UseVisualStyleBackColor = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // RegisterPet
-            // 
-            this.RegisterPet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterPet.BackColor = System.Drawing.Color.Transparent;
-            this.RegisterPet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RegisterPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterPet.Location = new System.Drawing.Point(17, 372);
-            this.RegisterPet.Name = "RegisterPet";
-            this.RegisterPet.Size = new System.Drawing.Size(150, 35);
-            this.RegisterPet.TabIndex = 9;
-            this.RegisterPet.Text = "Register Pet";
-            this.RegisterPet.UseVisualStyleBackColor = false;
-            this.RegisterPet.Click += new System.EventHandler(this.RegisterPet_Click);
-            // 
-            // AddStaff
-            // 
-            this.AddStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddStaff.BackColor = System.Drawing.Color.Transparent;
-            this.AddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStaff.Location = new System.Drawing.Point(17, 529);
-            this.AddStaff.Name = "AddStaff";
-            this.AddStaff.Size = new System.Drawing.Size(150, 35);
-            this.AddStaff.TabIndex = 12;
-            this.AddStaff.Text = "Add Staff";
-            this.AddStaff.UseVisualStyleBackColor = false;
-            this.AddStaff.Click += new System.EventHandler(this.AddStaff_Click);
-            // 
-            // RegisterOwner
-            // 
-            this.RegisterOwner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterOwner.BackColor = System.Drawing.Color.Transparent;
-            this.RegisterOwner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RegisterOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterOwner.Location = new System.Drawing.Point(17, 318);
-            this.RegisterOwner.Name = "RegisterOwner";
-            this.RegisterOwner.Size = new System.Drawing.Size(150, 35);
-            this.RegisterOwner.TabIndex = 8;
-            this.RegisterOwner.Text = "Register Owner";
-            this.RegisterOwner.UseVisualStyleBackColor = false;
-            this.RegisterOwner.Click += new System.EventHandler(this.RegisterOwner_Click);
-            // 
-            // AddTreatments
-            // 
-            this.AddTreatments.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTreatments.BackColor = System.Drawing.Color.Transparent;
-            this.AddTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddTreatments.Location = new System.Drawing.Point(17, 478);
-            this.AddTreatments.Name = "AddTreatments";
-            this.AddTreatments.Size = new System.Drawing.Size(150, 35);
-            this.AddTreatments.TabIndex = 11;
-            this.AddTreatments.Text = "Treatment";
-            this.AddTreatments.UseVisualStyleBackColor = false;
-            this.AddTreatments.Click += new System.EventHandler(this.AddTreatments_Click);
-            // 
-            // VetDoctor
-            // 
-            this.VetDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VetDoctor.BackColor = System.Drawing.Color.Transparent;
-            this.VetDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.VetDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VetDoctor.Location = new System.Drawing.Point(17, 427);
-            this.VetDoctor.Name = "VetDoctor";
-            this.VetDoctor.Size = new System.Drawing.Size(150, 35);
-            this.VetDoctor.TabIndex = 10;
-            this.VetDoctor.Text = "Vet Doctor";
-            this.VetDoctor.UseVisualStyleBackColor = false;
-            this.VetDoctor.Click += new System.EventHandler(this.VetDoctor_Click);
-            // 
-            // appointmentList
-            // 
-            this.appointmentList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.appointmentList.BackgroundColor = System.Drawing.Color.LightPink;
-            this.appointmentList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.appointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.appointmentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bill_id,
-            this.bill_appointment_id,
-            this.bill_total_cost,
-            this.bill_status});
-            this.appointmentList.Location = new System.Drawing.Point(610, 111);
-            this.appointmentList.Name = "appointmentList";
-            this.appointmentList.RowHeadersWidth = 51;
-            this.appointmentList.RowTemplate.Height = 24;
-            this.appointmentList.Size = new System.Drawing.Size(860, 307);
-            this.appointmentList.TabIndex = 76;
-            // 
-            // bill_id
-            // 
-            this.bill_id.HeaderText = "Bill Id";
-            this.bill_id.MinimumWidth = 6;
-            this.bill_id.Name = "bill_id";
-            this.bill_id.Width = 125;
-            // 
-            // bill_appointment_id
-            // 
-            this.bill_appointment_id.HeaderText = "Appointment id";
-            this.bill_appointment_id.MinimumWidth = 6;
-            this.bill_appointment_id.Name = "bill_appointment_id";
-            this.bill_appointment_id.Width = 125;
-            // 
-            // bill_total_cost
-            // 
-            this.bill_total_cost.HeaderText = "Total Cost";
-            this.bill_total_cost.MinimumWidth = 6;
-            this.bill_total_cost.Name = "bill_total_cost";
-            this.bill_total_cost.Width = 125;
-            // 
-            // bill_status
-            // 
-            this.bill_status.HeaderText = "Bill Status";
-            this.bill_status.MinimumWidth = 6;
-            this.bill_status.Name = "bill_status";
-            this.bill_status.Width = 125;
+            this.billsList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.billsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.billsList.BackgroundColor = System.Drawing.Color.LightPink;
+            this.billsList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.billsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.billsList.Location = new System.Drawing.Point(540, 147);
+            this.billsList.Name = "billsList";
+            this.billsList.RowHeadersWidth = 51;
+            this.billsList.RowTemplate.Height = 24;
+            this.billsList.Size = new System.Drawing.Size(874, 332);
+            this.billsList.TabIndex = 76;
+            this.billsList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.billsList_CellClick);
             // 
             // textTotalCost
             // 
             this.textTotalCost.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTotalCost.Location = new System.Drawing.Point(244, 412);
+            this.textTotalCost.Location = new System.Drawing.Point(84, 424);
             this.textTotalCost.Name = "textTotalCost";
             this.textTotalCost.Size = new System.Drawing.Size(299, 30);
             this.textTotalCost.TabIndex = 73;
+            this.textTotalCost.TextChanged += new System.EventHandler(this.textTotalCost_TextChanged);
             // 
-            // dataGridView1
+            // treatmentList
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightPink;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.treatment_id,
-            this.treatment_appointment_id,
-            this.treatment_description,
-            this.medication,
-            this.cost});
-            this.dataGridView1.Location = new System.Drawing.Point(610, 449);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(861, 388);
-            this.dataGridView1.TabIndex = 83;
-            // 
-            // treatment_id
-            // 
-            this.treatment_id.HeaderText = "Treatment ID";
-            this.treatment_id.MinimumWidth = 6;
-            this.treatment_id.Name = "treatment_id";
-            this.treatment_id.Width = 125;
-            // 
-            // treatment_appointment_id
-            // 
-            this.treatment_appointment_id.HeaderText = "Appointment Id";
-            this.treatment_appointment_id.MinimumWidth = 6;
-            this.treatment_appointment_id.Name = "treatment_appointment_id";
-            this.treatment_appointment_id.Width = 125;
-            // 
-            // treatment_description
-            // 
-            this.treatment_description.HeaderText = "Treatment Description";
-            this.treatment_description.MinimumWidth = 6;
-            this.treatment_description.Name = "treatment_description";
-            this.treatment_description.Width = 125;
-            // 
-            // medication
-            // 
-            this.medication.HeaderText = "Medication";
-            this.medication.MinimumWidth = 6;
-            this.medication.Name = "medication";
-            this.medication.Width = 125;
-            // 
-            // cost
-            // 
-            this.cost.HeaderText = "Cost";
-            this.cost.MinimumWidth = 6;
-            this.cost.Name = "cost";
-            this.cost.Width = 125;
+            this.treatmentList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.treatmentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.treatmentList.BackgroundColor = System.Drawing.Color.LightPink;
+            this.treatmentList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.treatmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.treatmentList.Location = new System.Drawing.Point(540, 532);
+            this.treatmentList.Name = "treatmentList";
+            this.treatmentList.RowHeadersWidth = 51;
+            this.treatmentList.RowTemplate.Height = 24;
+            this.treatmentList.Size = new System.Drawing.Size(874, 305);
+            this.treatmentList.TabIndex = 83;
+            this.treatmentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.treatmentList_CellContentClick);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(968, 421);
+            this.label2.Location = new System.Drawing.Point(535, 494);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 25);
+            this.label2.Size = new System.Drawing.Size(299, 25);
             this.label2.TabIndex = 82;
-            this.label2.Text = "Treatment Record";
+            this.label2.Text = "Treatment with no Bills issued";
             // 
             // Delete
             // 
@@ -400,12 +195,13 @@
             this.Delete.BackColor = System.Drawing.Color.HotPink;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(409, 733);
+            this.Delete.Location = new System.Drawing.Point(246, 708);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(108, 48);
             this.Delete.TabIndex = 87;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Update
             // 
@@ -413,12 +209,13 @@
             this.Update.BackColor = System.Drawing.Color.HotPink;
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(409, 656);
+            this.Update.Location = new System.Drawing.Point(246, 631);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(108, 48);
             this.Update.TabIndex = 86;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // New
             // 
@@ -426,12 +223,13 @@
             this.New.BackColor = System.Drawing.Color.HotPink;
             this.New.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.New.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(276, 733);
+            this.New.Location = new System.Drawing.Point(113, 708);
             this.New.Name = "New";
             this.New.Size = new System.Drawing.Size(108, 48);
             this.New.TabIndex = 85;
             this.New.Text = "New";
             this.New.UseVisualStyleBackColor = false;
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // Add
             // 
@@ -439,29 +237,31 @@
             this.Add.BackColor = System.Drawing.Color.HotPink;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(276, 656);
+            this.Add.Location = new System.Drawing.Point(113, 631);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(108, 48);
             this.Add.TabIndex = 84;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Find
             // 
             this.Find.BackColor = System.Drawing.Color.LightPink;
-            this.Find.Location = new System.Drawing.Point(486, 162);
+            this.Find.Location = new System.Drawing.Point(325, 175);
             this.Find.Name = "Find";
             this.Find.Size = new System.Drawing.Size(85, 32);
             this.Find.TabIndex = 90;
             this.Find.Text = "Search";
             this.Find.UseVisualStyleBackColor = false;
+            this.Find.Click += new System.EventHandler(this.Find_Click);
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(239, 136);
+            this.label6.Location = new System.Drawing.Point(78, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 25);
             this.label6.TabIndex = 89;
@@ -471,10 +271,130 @@
             // 
             this.staffIdSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.staffIdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.staffIdSearch.Location = new System.Drawing.Point(244, 164);
+            this.staffIdSearch.Location = new System.Drawing.Point(83, 177);
             this.staffIdSearch.Name = "staffIdSearch";
             this.staffIdSearch.Size = new System.Drawing.Size(236, 30);
             this.staffIdSearch.TabIndex = 88;
+            this.staffIdSearch.TextChanged += new System.EventHandler(this.staffIdSearch_TextChanged);
+            // 
+            // Dashboard
+            // 
+            this.Dashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Dashboard.BackColor = System.Drawing.Color.LightPink;
+            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.Location = new System.Drawing.Point(20, 50);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(119, 35);
+            this.Dashboard.TabIndex = 91;
+            this.Dashboard.Text = "Back";
+            this.Dashboard.UseVisualStyleBackColor = false;
+            this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
+            // 
+            // paidbtn
+            // 
+            this.paidbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.paidbtn.BackColor = System.Drawing.Color.LightGreen;
+            this.paidbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.paidbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paidbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.paidbtn.Location = new System.Drawing.Point(87, 548);
+            this.paidbtn.Name = "paidbtn";
+            this.paidbtn.Size = new System.Drawing.Size(137, 40);
+            this.paidbtn.TabIndex = 92;
+            this.paidbtn.Text = "Paid";
+            this.paidbtn.UseVisualStyleBackColor = false;
+            this.paidbtn.Click += new System.EventHandler(this.paidbtn_Click);
+            // 
+            // unpaidbtn
+            // 
+            this.unpaidbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.unpaidbtn.BackColor = System.Drawing.Color.Crimson;
+            this.unpaidbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.unpaidbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unpaidbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.unpaidbtn.Location = new System.Drawing.Point(246, 548);
+            this.unpaidbtn.Name = "unpaidbtn";
+            this.unpaidbtn.Size = new System.Drawing.Size(137, 40);
+            this.unpaidbtn.TabIndex = 93;
+            this.unpaidbtn.Text = "Unpaid";
+            this.unpaidbtn.UseVisualStyleBackColor = false;
+            this.unpaidbtn.Click += new System.EventHandler(this.unpaidbtn_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Pink;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createAppointmentToolStripMenuItem,
+            this.registerPetToolStripMenuItem,
+            this.registerPetToolStripMenuItem1,
+            this.registerNewDoctorToolStripMenuItem,
+            this.createTreatmentToolStripMenuItem,
+            this.recordBillsToolStripMenuItem,
+            this.registerStaffToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1482, 31);
+            this.menuStrip1.TabIndex = 94;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // createAppointmentToolStripMenuItem
+            // 
+            this.createAppointmentToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.createAppointmentToolStripMenuItem.Name = "createAppointmentToolStripMenuItem";
+            this.createAppointmentToolStripMenuItem.Size = new System.Drawing.Size(189, 27);
+            this.createAppointmentToolStripMenuItem.Text = "Create Appointment";
+            this.createAppointmentToolStripMenuItem.Click += new System.EventHandler(this.createAppointmentToolStripMenuItem_Click);
+            // 
+            // registerPetToolStripMenuItem
+            // 
+            this.registerPetToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerPetToolStripMenuItem.Name = "registerPetToolStripMenuItem";
+            this.registerPetToolStripMenuItem.Size = new System.Drawing.Size(148, 27);
+            this.registerPetToolStripMenuItem.Text = "Register Owner";
+            this.registerPetToolStripMenuItem.Click += new System.EventHandler(this.registerPetToolStripMenuItem_Click);
+            // 
+            // registerPetToolStripMenuItem1
+            // 
+            this.registerPetToolStripMenuItem1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerPetToolStripMenuItem1.Name = "registerPetToolStripMenuItem1";
+            this.registerPetToolStripMenuItem1.Size = new System.Drawing.Size(120, 27);
+            this.registerPetToolStripMenuItem1.Text = "Register Pet";
+            this.registerPetToolStripMenuItem1.Click += new System.EventHandler(this.registerPetToolStripMenuItem1_Click);
+            // 
+            // registerNewDoctorToolStripMenuItem
+            // 
+            this.registerNewDoctorToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerNewDoctorToolStripMenuItem.Name = "registerNewDoctorToolStripMenuItem";
+            this.registerNewDoctorToolStripMenuItem.Size = new System.Drawing.Size(150, 27);
+            this.registerNewDoctorToolStripMenuItem.Text = "Register Doctor";
+            this.registerNewDoctorToolStripMenuItem.Click += new System.EventHandler(this.registerNewDoctorToolStripMenuItem_Click);
+            // 
+            // createTreatmentToolStripMenuItem
+            // 
+            this.createTreatmentToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.createTreatmentToolStripMenuItem.Name = "createTreatmentToolStripMenuItem";
+            this.createTreatmentToolStripMenuItem.Size = new System.Drawing.Size(164, 27);
+            this.createTreatmentToolStripMenuItem.Text = "Create Treatment";
+            this.createTreatmentToolStripMenuItem.Click += new System.EventHandler(this.createTreatmentToolStripMenuItem_Click);
+            // 
+            // recordBillsToolStripMenuItem
+            // 
+            this.recordBillsToolStripMenuItem.BackColor = System.Drawing.Color.HotPink;
+            this.recordBillsToolStripMenuItem.Name = "recordBillsToolStripMenuItem";
+            this.recordBillsToolStripMenuItem.Size = new System.Drawing.Size(118, 27);
+            this.recordBillsToolStripMenuItem.Text = "Record Bills";
+            this.recordBillsToolStripMenuItem.Click += new System.EventHandler(this.recordBillsToolStripMenuItem_Click);
+            // 
+            // registerStaffToolStripMenuItem
+            // 
+            this.registerStaffToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.registerStaffToolStripMenuItem.Name = "registerStaffToolStripMenuItem";
+            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(135, 27);
+            this.registerStaffToolStripMenuItem.Text = "Register Staff";
+            this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
             // Bills
             // 
@@ -482,6 +402,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.unpaidbtn);
+            this.Controls.Add(this.paidbtn);
+            this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.Find);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.staffIdSearch);
@@ -489,7 +413,7 @@
             this.Controls.Add(this.Update);
             this.Controls.Add(this.New);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.treatmentList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBillStatus);
@@ -498,24 +422,23 @@
             this.Controls.Add(this.textbillAppointmentId);
             this.Controls.Add(this.labelfname);
             this.Controls.Add(this.ScheduleAppointmentlabel);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.appointmentList);
+            this.Controls.Add(this.billsList);
             this.Controls.Add(this.textTotalCost);
             this.MinimumSize = new System.Drawing.Size(1500, 940);
             this.Name = "Bills";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bills";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Bills_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.billsList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatmentList)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button schedAppointment;
-        private System.Windows.Forms.Button RecordBills;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBillStatus;
         private System.Windows.Forms.Label label1;
@@ -523,25 +446,9 @@
         private System.Windows.Forms.TextBox textbillAppointmentId;
         private System.Windows.Forms.Label labelfname;
         private System.Windows.Forms.Label ScheduleAppointmentlabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button exit;
-        private System.Windows.Forms.Button RegisterPet;
-        private System.Windows.Forms.Button AddStaff;
-        private System.Windows.Forms.Button RegisterOwner;
-        private System.Windows.Forms.Button AddTreatments;
-        private System.Windows.Forms.Button VetDoctor;
-        private System.Windows.Forms.DataGridView appointmentList;
+        private System.Windows.Forms.DataGridView billsList;
         private System.Windows.Forms.TextBox textTotalCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bill_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bill_appointment_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bill_total_cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bill_status;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn treatment_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn treatment_appointment_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn treatment_description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medication;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cost;
+        private System.Windows.Forms.DataGridView treatmentList;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Update;
@@ -550,5 +457,16 @@
         private System.Windows.Forms.Button Find;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox staffIdSearch;
+        private System.Windows.Forms.Button Dashboard;
+        private System.Windows.Forms.Button paidbtn;
+        private System.Windows.Forms.Button unpaidbtn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem createAppointmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerPetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerPetToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem registerNewDoctorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createTreatmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recordBillsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
     }
 }

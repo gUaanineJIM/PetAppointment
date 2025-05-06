@@ -34,9 +34,10 @@
             this.textUsername = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.buttonOk = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnSignIn = new System.Windows.Forms.Button();
+            this.ForgotPasswordLink = new System.Windows.Forms.LinkLabel();
+            this.createAcc = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(219, 34);
             this.textUsername.TabIndex = 3;
+            this.textUsername.TextChanged += new System.EventHandler(this.textUsername_TextChanged);
             // 
             // textPassword
             // 
@@ -92,6 +94,7 @@
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(219, 34);
             this.textPassword.TabIndex = 4;
+            this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
             // 
             // buttonOk
             // 
@@ -99,13 +102,52 @@
             this.buttonOk.BackColor = System.Drawing.Color.LightGreen;
             this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(641, 343);
+            this.buttonOk.Location = new System.Drawing.Point(644, 367);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(219, 47);
             this.buttonOk.TabIndex = 5;
             this.buttonOk.Text = "Login";
             this.buttonOk.UseVisualStyleBackColor = false;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(487, 442);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(204, 22);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Don\'t Have an Account?\r\n";
+            // 
+            // ForgotPasswordLink
+            // 
+            this.ForgotPasswordLink.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ForgotPasswordLink.AutoSize = true;
+            this.ForgotPasswordLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPasswordLink.LinkColor = System.Drawing.Color.Red;
+            this.ForgotPasswordLink.Location = new System.Drawing.Point(723, 292);
+            this.ForgotPasswordLink.Name = "ForgotPasswordLink";
+            this.ForgotPasswordLink.Size = new System.Drawing.Size(161, 20);
+            this.ForgotPasswordLink.TabIndex = 21;
+            this.ForgotPasswordLink.TabStop = true;
+            this.ForgotPasswordLink.Text = "Forgot Password?";
+            this.ForgotPasswordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPasswordLink_LinkClicked);
+            // 
+            // createAcc
+            // 
+            this.createAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.createAcc.AutoSize = true;
+            this.createAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAcc.Location = new System.Drawing.Point(724, 442);
+            this.createAcc.Name = "createAcc";
+            this.createAcc.Size = new System.Drawing.Size(139, 20);
+            this.createAcc.TabIndex = 23;
+            this.createAcc.TabStop = true;
+            this.createAcc.Text = "Create Account";
+            this.createAcc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAcc_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -118,39 +160,13 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(74, 412);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 22);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Create Account?\r\n";
-            // 
-            // btnSignIn
-            // 
-            this.btnSignIn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSignIn.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSignIn.Location = new System.Drawing.Point(115, 448);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(219, 46);
-            this.btnSignIn.TabIndex = 20;
-            this.btnSignIn.Text = "Create Account";
-            this.btnSignIn.UseVisualStyleBackColor = false;
-            // 
             // LoginAcc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(998, 577);
-            this.Controls.Add(this.btnSignIn);
+            this.Controls.Add(this.createAcc);
+            this.Controls.Add(this.ForgotPasswordLink);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonOk);
@@ -181,6 +197,7 @@
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.LinkLabel ForgotPasswordLink;
+        private System.Windows.Forms.LinkLabel createAcc;
     }
 }
