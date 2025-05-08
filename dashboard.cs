@@ -122,7 +122,8 @@ namespace PetAppointment
 
             await Task.Run(() =>
             {
-                string filePath = @"D:\Janine Ishe\College\BSIT 3rd Year\EDP\ACT7\PetAppointment\bin\Debug\ReportTemplate\vetBackup.xlsx";
+                // Use a relative path to locate the backup file
+                string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ReportTemplate", "vetBackup.xlsx");
 
                 Excel.Application excelApp = null;
                 Excel.Workbook workbook = null;
@@ -173,6 +174,7 @@ namespace PetAppointment
 
             MessageBox.Show("Backup completed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
 
         private void BackupTableToSheet(Excel.Workbook workbook, string sheetName, string query, string startCell)
