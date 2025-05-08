@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
 
 namespace PetAppointment
 {
@@ -492,7 +494,81 @@ namespace PetAppointment
 
         private void backup_Click(object sender, EventArgs e)
         {
+            string filePath = @"D:\Janine Ishe\College\BSIT 3rd Year\EDP\ACT7\PetAppointment\bin\Debug\ReportTemplate\vetBackup.xlsx";
 
+            Excel.Application excelApp = null;
+            Excel.Workbook workbook = null;
+            Excel.Worksheet worksheet = null;
+
+            try
+            {
+                // Start Excel application
+                excelApp = new Excel.Application();
+                excelApp.DisplayAlerts = false;
+
+                // Open the existing workbook
+                workbook = excelApp.Workbooks.Open(filePath);
+
+                // Get the "staff" worksheet
+                worksheet = workbook.Sheets["staff"] as Excel.Worksheet;
+                if (worksheet == null)
+                {
+                    MessageBox.Show("The 'staff' sheet does not exist in the Excel file.");
+                    return;
+                }
+
+                // Clear existing data starting from A3
+                Excel.Range usedRange = worksheet.UsedRange;
+                Excel.Range startCell = worksheet.Cells[3, 1]; // Start clearing from A3
+                Excel.Range endCell = worksheet.Cells[usedRange.Rows.Count, usedRange.Columns.Count];
+                Excel.Range clearRange = worksheet.Range[startCell, endCell];
+                clearRange.Clear();
+
+                // Write data from DataGridView to the Excel sheet
+                int row = 3; // Start at row 3
+                foreach (DataGridViewRow dgvRow in stafftsList.Rows)
+                {
+                    if (!dgvRow.IsNewRow) // Skip the new row placeholder
+                    {
+                        worksheet.Cells[row, 1].Value = dgvRow.Cells["staff_id"].Value; // Column A
+                        worksheet.Cells[row, 2].Value = dgvRow.Cells["first_name"].Value; // Column B
+                        worksheet.Cells[row, 3].Value = dgvRow.Cells["last_name"].Value; // Column C
+                        worksheet.Cells[row, 4].Value = dgvRow.Cells["phone"].Value?.ToString(); // Column D (Ensure phone is passed as string)
+                        row++;
+                    }
+                }
+
+                // Save and close the workbook
+                workbook.Save();
+                MessageBox.Show("Backup completed successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during backup: " + ex.Message);
+            }
+            finally
+            {
+                // Release COM objects to avoid memory leaks
+                if (worksheet != null) Marshal.ReleaseComObject(worksheet);
+                if (workbook != null)
+                {
+                    workbook.Close(false);
+                    Marshal.ReleaseComObject(workbook);
+                }
+                if (excelApp != null)
+                {
+                    excelApp.Quit();
+                    Marshal.ReleaseComObject(excelApp);
+                }
+
+                worksheet = null;
+                workbook = null;
+                excelApp = null;
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
         }
+
     }
 }

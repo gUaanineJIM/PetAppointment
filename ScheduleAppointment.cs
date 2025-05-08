@@ -345,12 +345,12 @@ namespace PetAppointment
                 try
                 {
                     // Validate the appointment date
-                    DateTime selectedDate = DateTime.Parse(textDate.Text); // Parse the date from the TextBox
-                    if (selectedDate.Date < DateTime.Now.Date) // Compare only the date part
+                    DateTime selectedDate = DateTime.Parse(textDate.Text);
+                    if (selectedDate.Date < DateTime.Now.Date)
                     {
                         MessageBox.Show("The appointment date cannot be in the past. Please select a valid date.",
                                         "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; // Exit the method if the date is invalid
+                        return; 
                     }
 
                     // Validate the appointment time
@@ -494,8 +494,8 @@ namespace PetAppointment
                 }
                 catch (MySqlException ex)
                 {
-                    // Handle SQL exceptions, including those triggered by the `before_appointment_update` trigger
-                    if (ex.Number == 1644) // Custom error from the trigger
+                    
+                    if (ex.Number == 1644) 
                     {
                         MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

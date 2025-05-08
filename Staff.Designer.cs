@@ -53,7 +53,6 @@
             this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stafftsList)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -335,28 +334,12 @@
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
-            // backup
-            // 
-            this.backup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.backup.BackColor = System.Drawing.Color.LightBlue;
-            this.backup.FlatAppearance.BorderSize = 0;
-            this.backup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backup.Location = new System.Drawing.Point(1291, 61);
-            this.backup.Name = "backup";
-            this.backup.Size = new System.Drawing.Size(153, 41);
-            this.backup.TabIndex = 97;
-            this.backup.Text = "Backup Table";
-            this.backup.UseVisualStyleBackColor = false;
-            this.backup.Click += new System.EventHandler(this.backup_Click);
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
-            this.Controls.Add(this.backup);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.Find);
@@ -414,6 +397,5 @@
         private System.Windows.Forms.ToolStripMenuItem createTreatmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recordBillsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
-        private System.Windows.Forms.Button backup;
     }
 }

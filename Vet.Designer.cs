@@ -58,6 +58,9 @@
             this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchUp = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.vetIdup = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.vetLists)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -292,7 +295,7 @@
             // 
             this.vetearningBtn.BackColor = System.Drawing.Color.LightGreen;
             this.vetearningBtn.FlatAppearance.BorderSize = 0;
-            this.vetearningBtn.Location = new System.Drawing.Point(1347, 173);
+            this.vetearningBtn.Location = new System.Drawing.Point(1290, 133);
             this.vetearningBtn.Name = "vetearningBtn";
             this.vetearningBtn.Size = new System.Drawing.Size(85, 32);
             this.vetearningBtn.TabIndex = 80;
@@ -305,7 +308,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1104, 145);
+            this.label3.Location = new System.Drawing.Point(1047, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(305, 20);
             this.label3.TabIndex = 79;
@@ -315,7 +318,7 @@
             // 
             this.textVETID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textVETID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textVETID.Location = new System.Drawing.Point(1109, 173);
+            this.textVETID.Location = new System.Drawing.Point(1052, 133);
             this.textVETID.Name = "textVETID";
             this.textVETID.Size = new System.Drawing.Size(236, 30);
             this.textVETID.TabIndex = 78;
@@ -396,12 +399,48 @@
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
+            // searchUp
+            // 
+            this.searchUp.BackColor = System.Drawing.Color.LightGreen;
+            this.searchUp.FlatAppearance.BorderSize = 0;
+            this.searchUp.Location = new System.Drawing.Point(1289, 206);
+            this.searchUp.Name = "searchUp";
+            this.searchUp.Size = new System.Drawing.Size(85, 32);
+            this.searchUp.TabIndex = 84;
+            this.searchUp.Text = "Search";
+            this.searchUp.UseVisualStyleBackColor = false;
+            this.searchUp.Click += new System.EventHandler(this.searchUp_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1046, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(344, 20);
+            this.label5.TabIndex = 83;
+            this.label5.Text = "Enter ID to view upcoming appointment:\r\n";
+            // 
+            // vetIdup
+            // 
+            this.vetIdup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vetIdup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vetIdup.Location = new System.Drawing.Point(1051, 206);
+            this.vetIdup.Name = "vetIdup";
+            this.vetIdup.Size = new System.Drawing.Size(236, 30);
+            this.vetIdup.TabIndex = 82;
+            this.vetIdup.TextChanged += new System.EventHandler(this.vetIdup_TextChanged);
+            // 
             // Vet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.searchUp);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.vetIdup);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.vetearningBtn);
             this.Controls.Add(this.label3);
@@ -470,5 +509,8 @@
         private System.Windows.Forms.ToolStripMenuItem createTreatmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recordBillsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
+        private System.Windows.Forms.Button searchUp;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox vetIdup;
     }
 }

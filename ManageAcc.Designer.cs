@@ -46,10 +46,10 @@
             this.New = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.UsersTable = new System.Windows.Forms.DataGridView();
-            this.vetearningBtn = new System.Windows.Forms.Button();
             this.textVETID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsersTable)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,7 @@
             this.backupTablesToolStripMenuItem.Name = "backupTablesToolStripMenuItem";
             this.backupTablesToolStripMenuItem.Size = new System.Drawing.Size(168, 27);
             this.backupTablesToolStripMenuItem.Text = "Backup All Records";
+            this.backupTablesToolStripMenuItem.Click += new System.EventHandler(this.backupTablesToolStripMenuItem_Click);
             // 
             // textFavPet
             // 
@@ -257,17 +258,6 @@
             this.UsersTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersTable_CellClick);
             this.UsersTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersTable_CellClick);
             // 
-            // vetearningBtn
-            // 
-            this.vetearningBtn.BackColor = System.Drawing.Color.LightGreen;
-            this.vetearningBtn.FlatAppearance.BorderSize = 0;
-            this.vetearningBtn.Location = new System.Drawing.Point(357, 129);
-            this.vetearningBtn.Name = "vetearningBtn";
-            this.vetearningBtn.Size = new System.Drawing.Size(85, 32);
-            this.vetearningBtn.TabIndex = 82;
-            this.vetearningBtn.Text = "Search";
-            this.vetearningBtn.UseVisualStyleBackColor = false;
-            // 
             // textVETID
             // 
             this.textVETID.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -276,6 +266,7 @@
             this.textVETID.Name = "textVETID";
             this.textVETID.Size = new System.Drawing.Size(236, 30);
             this.textVETID.TabIndex = 81;
+            this.textVETID.TextChanged += new System.EventHandler(this.textVETID_TextChanged);
             // 
             // label5
             // 
@@ -299,15 +290,27 @@
             this.label7.TabIndex = 84;
             this.label7.Text = "Users table:";
             // 
+            // search
+            // 
+            this.search.BackColor = System.Drawing.Color.LightGreen;
+            this.search.FlatAppearance.BorderSize = 0;
+            this.search.Location = new System.Drawing.Point(377, 127);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(85, 32);
+            this.search.TabIndex = 85;
+            this.search.Text = "Search";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            // 
             // ManageAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.vetearningBtn);
             this.Controls.Add(this.textVETID);
             this.Controls.Add(this.UsersTable);
             this.Controls.Add(this.Delete);
@@ -357,9 +360,9 @@
         private System.Windows.Forms.Button New;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.DataGridView UsersTable;
-        private System.Windows.Forms.Button vetearningBtn;
         private System.Windows.Forms.TextBox textVETID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button search;
     }
 }

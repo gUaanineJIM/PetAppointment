@@ -17,6 +17,7 @@ namespace PetAppointment
         {
             InitializeComponent();
             LoadAccounts();
+
         }
 
         private void addAccountToolStripMenuItem_Click(object sender, EventArgs e)
@@ -326,6 +327,83 @@ namespace PetAppointment
                 catch (Exception ex)
                 {
                     MessageBox.Show($"An error occurred while deleting the account: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void backupTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackupData backupData = new BackupData();
+            backupData.Show();
+            this.Close();
+        }
+
+
+        private void textVETID_TextChanged(object sender, EventArgs e)
+        {
+            // Get the user ID from the textbox
+            string userId = textVETID.Text.Trim();
+
+            // Perform the search if the textbox is not empty
+            if (!string.IsNullOrEmpty(userId))
+            {
+                SearchUserById(userId);
+            }
+            else
+            {
+                // Reload all accounts if the textbox is cleared
+                LoadAccounts();
+            }
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            // Get the user ID from the textbox
+            string userId = textVETID.Text.Trim();
+
+            // Validate input
+            if (string.IsNullOrEmpty(userId))
+            {
+                MessageBox.Show("Please enter a User ID to search.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Perform the search
+            SearchUserById(userId);
+        }
+
+        // Helper method to search for a user by ID
+        private void SearchUserById(string userId)
+        {
+            string connectionString = "server=localhost;uid=root;pwd=123456;database=vet_record;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Query to fetch the user with the specified ID
+                    string query = "SELECT id, name, username, password, sec_question FROM accounts WHERE id = @userId";
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@userId", userId);
+
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    // Bind the filtered data to the UsersTable DataGridView
+                    UsersTable.DataSource = dt;
+
+                    // Check if no results were found
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No user found with the specified ID.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

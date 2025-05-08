@@ -562,5 +562,77 @@ namespace PetAppointment
             staff.Show();
             this.Close();
         }
+
+        private void vetIdup_TextChanged(object sender, EventArgs e)
+        {
+            // Do nothing when the text changes
+        }
+
+        private void searchUp_Click(object sender, EventArgs e)
+        {
+            // Trigger the search when the button is clicked
+            if (int.TryParse(vetIdup.Text.Trim(), out int vetId))
+            {
+                SearchAndDisplayVetAppointments(vetId);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid Vet ID.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // Function to search and display vet appointments
+        private void SearchAndDisplayVetAppointments(int vetId)
+        {
+            string connectionString = "server=localhost;uid=root;pwd=123456;database=vet_record;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand("VetUpcomApp_withVetSpec", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@vet_id_param", vetId);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        // Display the results in a dialog box with a DataGridView
+                        Form resultsForm = new Form
+                        {
+                            Text = "Upcoming Appointments",
+                            Size = new Size(800, 400),
+                            StartPosition = FormStartPosition.CenterScreen // Center the dialog box
+                        };
+
+                        DataGridView dataGridView = new DataGridView
+                        {
+                            DataSource = dt,
+                            Dock = DockStyle.Fill,
+                            ReadOnly = true,
+                            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                        };
+
+                        resultsForm.Controls.Add(dataGridView);
+                        resultsForm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No upcoming appointments found for the specified Vet ID.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
     }
 }

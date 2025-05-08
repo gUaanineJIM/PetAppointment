@@ -31,5 +31,12 @@ namespace PetAppointment
             loginAcc.Show();
             this.Close();
         }
+
+        private void backupTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackupData backupData = new BackupData();
+            backupData.Show();
+            this.Close();
+        }
     }
 }
