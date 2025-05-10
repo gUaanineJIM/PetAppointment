@@ -678,5 +678,49 @@ namespace PetAppointment
             staff.Show();
             this.Close();
         }
+
+        private void billsum_Click(object sender, EventArgs e)
+        {
+            string connectionString = "server=localhost;uid=root;pwd=123456;database=vet_record;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM billing_summary";
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    // Create a dialog box
+                    Form dialog = new Form
+                    {
+                        Text = "Billing Summary",
+                        Size = new Size(800, 600),
+                        StartPosition = FormStartPosition.CenterParent 
+                    };
+
+                    DataGridView dataGridView = new DataGridView
+                    {
+                        DataSource = dt,
+                        Dock = DockStyle.Fill,
+                        ReadOnly = true,
+                        AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                    };
+
+                    dialog.Controls.Add(dataGridView);
+
+                    // Show the dialog
+                    dialog.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }

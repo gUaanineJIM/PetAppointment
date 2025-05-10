@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.backupAll = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerPetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerPetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@
             this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +120,13 @@
             this.menuStrip1.TabIndex = 99;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.BackColor = System.Drawing.Color.HotPink;
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
             // createAppointmentToolStripMenuItem
             // 
             this.createAppointmentToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
@@ -175,13 +182,6 @@
             this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(135, 27);
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            this.dashboardToolStripMenuItem.BackColor = System.Drawing.Color.HotPink;
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
-            this.dashboardToolStripMenuItem.Text = "Dashboard";
             // 
             // dashboard
             // 

@@ -57,6 +57,7 @@
             this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.billsum = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.billsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentList)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -396,12 +397,28 @@
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
+            // billsum
+            // 
+            this.billsum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.billsum.BackColor = System.Drawing.Color.LightGreen;
+            this.billsum.FlatAppearance.BorderSize = 0;
+            this.billsum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.billsum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billsum.Location = new System.Drawing.Point(1266, 50);
+            this.billsum.Name = "billsum";
+            this.billsum.Size = new System.Drawing.Size(148, 74);
+            this.billsum.TabIndex = 95;
+            this.billsum.Text = "Billing\r\nSummary";
+            this.billsum.UseVisualStyleBackColor = false;
+            this.billsum.Click += new System.EventHandler(this.billsum_Click);
+            // 
             // Bills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.billsum);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.unpaidbtn);
             this.Controls.Add(this.paidbtn);
@@ -468,5 +485,6 @@
         private System.Windows.Forms.ToolStripMenuItem createTreatmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recordBillsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
+        private System.Windows.Forms.Button billsum;
     }
 }

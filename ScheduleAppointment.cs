@@ -742,5 +742,63 @@ namespace PetAppointment
             staff.Show();
             this.Close();
         }
+
+        private void appointmentLog_Click(object sender, EventArgs e)
+        {
+            string connectionString = "server=localhost;uid=root;pwd=123456;database=vet_record;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Query to fetch data from appointment_logs with names and IDs
+                    string query = @"
+                SELECT 
+                    log_id AS 'Log ID',
+                    appointment_id AS 'Appointment ID',
+                    CONCAT(pets.pet_id, ' - ', pets.name) AS 'Pet (ID - Name)',
+                    CONCAT(vet_doctor.vet_id, ' - ', CONCAT(vet_doctor.first_name, ' ', vet_doctor.last_name)) AS 'Vet (ID - Name)',
+                    action AS 'Action',
+                    action_time AS 'Action Time'
+                FROM appointment_logs
+                LEFT JOIN pets ON appointment_logs.pet_id = pets.pet_id
+                LEFT JOIN vet_doctor ON appointment_logs.vet_id = vet_doctor.vet_id";
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    // Create a dialog box
+                    Form dialog = new Form
+                    {
+                        Text = "Appointment Logs",
+                        Size = new Size(800, 600),
+                        StartPosition = FormStartPosition.CenterParent // Center the dialog box
+                    };
+
+                    // Create a DataGridView to display the data
+                    DataGridView dataGridView = new DataGridView
+                    {
+                        DataSource = dt,
+                        Dock = DockStyle.Fill,
+                        ReadOnly = true,
+                        AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                    };
+
+                    // Add the DataGridView to the dialog
+                    dialog.Controls.Add(dataGridView);
+
+                    // Show the dialog
+                    dialog.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }

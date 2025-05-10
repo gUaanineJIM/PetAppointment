@@ -62,6 +62,7 @@
             this.createTreatmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appointmentLog = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.petLists)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentList)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -470,12 +471,28 @@
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
+            // appointmentLog
+            // 
+            this.appointmentLog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.appointmentLog.BackColor = System.Drawing.Color.LightGreen;
+            this.appointmentLog.FlatAppearance.BorderSize = 0;
+            this.appointmentLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.appointmentLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appointmentLog.Location = new System.Drawing.Point(1292, 251);
+            this.appointmentLog.Name = "appointmentLog";
+            this.appointmentLog.Size = new System.Drawing.Size(174, 48);
+            this.appointmentLog.TabIndex = 70;
+            this.appointmentLog.Text = "Logs";
+            this.appointmentLog.UseVisualStyleBackColor = false;
+            this.appointmentLog.Click += new System.EventHandler(this.appointmentLog_Click);
+            // 
             // ScheduleAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1482, 893);
+            this.Controls.Add(this.appointmentLog);
             this.Controls.Add(this.historyBTN);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textReasonofVisit);
@@ -554,5 +571,6 @@
         private System.Windows.Forms.ToolStripMenuItem createTreatmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recordBillsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
+        private System.Windows.Forms.Button appointmentLog;
     }
 }
