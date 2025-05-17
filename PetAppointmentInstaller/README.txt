@@ -2,8 +2,8 @@
              Veterinary Clinic Management System (VCMS)
 =====================================================================
 
-Developed by: Janine Ishe  
-Course: BSIT - 3rd Year  
+Developed by: Janine Ishe M. Matamorosa
+Course: BSIT - 3rd Year Block A 
 Subject: Event-Driven Programming  
 Language: C# (.NET Framework)  
 Database: MySQL  
