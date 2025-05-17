@@ -18,10 +18,10 @@ This is a desktop application built to assist veterinary clinics in managing the
 =====================================================================
 			HOW TO INSTALL
 =====================================================================
-1. Install MySQL (if not installed):
-   - Open the `mysql` folder  
-   - Run `mysql-installer-community-8.0.42.0.msi`  
-   - During setup, set your root password and remember it
+1. **Install MySQL**
+   - If MySQL is not yet installed, download and install it manually from:
+     https://dev.mysql.com/downloads/installer/
+   - During installation, remember your root username and password. You’ll use them when running the setup script.
 
 2. Import the MySQL Database:
    - Go back to the `PetAppointment` folder  
