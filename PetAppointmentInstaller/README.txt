@@ -16,29 +16,31 @@ This is a desktop application built to assist veterinary clinics in managing the
 - Admin dashboard can be accessed using username: admin password: admin
 
 =====================================================================
-			HOW TO INSTALL
+                        HOW TO INSTALL
 =====================================================================
+
 1. **Install MySQL**
    - If MySQL is not yet installed, download and install it manually from:
      https://dev.mysql.com/downloads/installer/
-   - During installation, remember your root username and password. You’ll use them when running the setup script.
+   - During installation, remember your root username and password. You’ll need them when running the setup script.
 
-2. Import the MySQL Database:
-   - Go back to the `PetAppointment` folder  
-   - Run `setup_database.bat`  
-   - Enter your MySQL username and password when prompted  
-   - The database (`PetAppointmentDB.sql`) will be imported automatically
+2. **Import the MySQL Database**
+   - Navigate to the `PetAppointment` folder.
+   - Run the file: `setup_database.bat`
+   - Enter your MySQL username and password when prompted.
+   - This will automatically import the database from `mysql\PetAppointmentDB.sql`.
 
-3. Check the Report Template Folder:
-   - Ensure the `ReportTemplate` folder exists in the same directory as `PetAppointment.exe`  
-   - It should contain `vetBackup.xlsx`, which is required for Excel report generation
+3. **Check the Report Template Folder**
+   - Make sure the `ReportTemplate` folder exists in the same directory as `PetAppointment.exe`.
+   - It must contain the file `vetBackup.xlsx`, which is required for Excel report generation.
 
-   Note:
-   - If the system throws an error related to Excel reports, double-check that `vetBackup.xlsx` exists  
-   - If needed, create the folder manually: `PetAppointment\ReportTemplate\vetBackup.xlsx`
+   **Note:**
+   - If you encounter an error related to Excel reports, check that `vetBackup.xlsx` exists.
+   - If it’s missing, manually create the folder and place the file at:
+     `PetAppointment\ReportTemplate\vetBackup.xlsx`
 
-4. Run the Application:
-   - Double-click `PetAppointment.exe` to launch the system
+4. **Run the Application**
+   - Double-click `PetAppointment.exe` to launch the system.
 
 =====================================================================
 NOTES:
